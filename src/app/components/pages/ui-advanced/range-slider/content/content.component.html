@@ -1,0 +1,63 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <!-- Basic Range Sliders -->
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Basic Range Sliders</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <h6 class="section-title">Default Slider</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider skin="flat" min="10" max="100"></ion-range-slider>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ml-auto mr-auto">
+                            <h6 class="section-title">Double Slider</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider type="double" grid="true" min="0" max="1000" from="200" to="800" prefix="$" ></ion-range-slider>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Date Slider</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider grid="true" from="new Date().getMonth()" [values]="custom_values" ></ion-range-slider>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Advanced Range Sliders -->
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Advanced Range Sliders</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6 class="section-title">Label Collision Detection</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider type="double" grid="true" min="10" max="100" from="47" to="53" prefix="Weight: " postfix=" million pounds" decorate_both="true"></ion-range-slider>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ml-auto mr-auto">
+                            <h6 class="section-title">Snap Slider</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider type="double" grid="true" min="-1000" max="1000" from="-500" to="500" step="250"></ion-range-slider>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Floating Point Slider</h6>
+                            <div class="ms-range-slider my-4">
+                                <ion-range-slider type="double" grid="true" min="-12.8" max="12.8" from="-3.2" to="3.2" step="0.1"></ion-range-slider>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

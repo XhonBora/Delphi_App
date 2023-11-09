@@ -1,0 +1,185 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <!-- Chat Sidebar -->
+        <div class="col-xl-4 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-body py-3 px-0">
+                    <div class="ms-chat-container">
+                        <div class="ms-chat-header px-3">
+                            <div class="ms-chat-user-container media clearfix">
+                                <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                                    <img src="assets/img/costic/customer-1.jpg" class="ms-img-round" alt="people">
+                                </div>
+                                <div class="media-body ms-chat-user-info mt-1">
+                                    <h6>Anny Farisha</h6>
+                                    <div ngbDropdown>
+                                        <a href="javascript:void(0);" class="text-disabled has-chevron fs-12" ngbDropdownToggle>
+                                            Available
+                                        </a>
+                                        <ul ngbDropdownMenu class="dropdown-menu">
+                                            <li class="ms-dropdown-list">
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Busy</span>
+                                                    </div>
+                                                </a>
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Away</span>
+                                                    </div>
+                                                </a>
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Offline</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ms-form my-3" method="post">
+                                <div class="ms-form-group my-0 mb-0 has-icon fs-14">
+                                    <input type="search" class="ms-form-input w-100" name="search"
+                                        placeholder="Search for People and Groups" value="">
+                                    <i class="flaticon-search text-disabled"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ms-chat-body">
+                            <ul class="nav nav-tabs tabs-bordered d-flex nav-justified px-3" ngbNav #nav="ngbNav">
+                                <li [ngbNavItem]="1" class="fs-12">
+                                    <a ngbNavLink> Chats </a> 
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                            <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix"
+                                                *ngFor="let item of chatspost">
+                                                <div class="ms-chat-status ms-status-away ms-has-new-msg ms-chat-img mr-3 align-self-center"
+                                                    *ngIf="item.newmsg">
+                                                    <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center" *ngIf="item.online">
+                                                    <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="ms-chat-status ms-status-offline ms-chat-img mr-3 align-self-center" *ngIf="item.offline">
+                                                    <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="ms-chat-status ms-status-busy ms-chat-img mr-3 align-self-center" *ngIf="item.busy">
+                                                    <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="media-body ms-chat-user-info mt-1">
+                                                    <h6>{{item.name}}</h6> <span class="ms-chat-time">{{item.time}}</span>
+                                                    <p>{{item.text}}</p>
+                                                    <i class="flaticon-trash ms-delete-trigger" (click)="removeItem(item)"> </i>
+                                                </div>
+                                            </li>
+                                        </perfect-scrollbar>
+                                    </ng-template>
+                                </li>
+                                <li [ngbNavItem]="2" class="fs-12">
+                                    <a ngbNavLink> Groups </a>
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                            <li class="ms-chat-user-container ms-open-chat p-3 media clearfix"
+                                                *ngFor="let item of groupspost">
+                                                <div class="ms-chat-img mr-3 align-self-center">
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="media-body ms-chat-user-info mt-1">
+                                                    <h6>{{item.name}}</h6> <a routerLink="/" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                                                    <p>{{item.text}}</p>
+                                                    <ul class="ms-group-members clearfix mt-3 mb-0">
+                                                        <li *ngFor="let user of item.moreuser">
+                                                            <img src="{{user.img}}" alt="{{item.name}}">
+                                                        </li>
+                                                        <li class="ms-group-count" *ngIf="item.totaluser"> {{item.totaluser}} </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </perfect-scrollbar>
+                                    </ng-template>
+                                </li>
+                                <li [ngbNavItem]="3" class="fs-12">
+                                    <a ngbNavLink> Contacts </a>
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                            <li class="ms-chat-user-container ms-open-chat p-3 media clearfix" *ngFor="let item of contactspost">
+                                                <div class="ms-chat-img mr-3 align-self-center">
+                                                    <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                                </div>
+                                                <div class="media-body ms-chat-user-info mt-1">
+                                                    <h6>{{item.name}}</h6> <a routerLink="/" class="ms-chat-time"> <i class="flaticon-chat"></i> </a>
+                                                    <p>{{item.text}}</p>
+                                                </div>
+                                            </li>
+                                         </perfect-scrollbar>
+                                    </ng-template>
+                                </li>
+                            </ul>
+                            <div [ngbNavOutlet]="nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Body -->
+        <div class="col-xl-8 col-md-12">
+            <div class="ms-panel ms-chat-conversations ms-widget">
+                <div class="ms-panel-header">
+                    <div class="ms-chat-header justify-content-between">
+                        <div class="ms-chat-user-container media clearfix">
+                            <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                                <img src="assets/img/costic/customer-3.jpg" class="ms-img-round" alt="people">
+                            </div>
+                            <div class="media-body ms-chat-user-info mt-1">
+                                <h6>Heather Brown</h6>
+                                <span class="text-disabled fs-12">
+                                    Active Now
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="ms-list ms-list-flex ms-chat-controls">
+                            <li placement="top" ngbTooltip="Call"> <i class="material-icons">local_phone</i> </li>
+                            <li placement="top" ngbTooltip="Video Call"> <i class="material-icons">videocam</i> </li>
+                            <li placement="top" ngbTooltip="Add to Chat"> <i class="material-icons">person_add</i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <perfect-scrollbar class="ms-panel-body ms-scrollable">
+                    <div class="{{item.userId === currentUserId ? 'ms-chat-bubble ms-chat-message media clearfix ms-chat-outgoing' : 'ms-chat-bubble ms-chat-message media clearfix ms-chat-incoming'}}"
+                        *ngFor="let item of chats; let i = index;">
+                        <div [innerHtml]="getChatInitialMsg(item, i)"></div>
+                        <div class="media-body">
+                            <div class="ms-chat-text">
+                                <p> {{item.message}}</p>
+                            </div>
+                            <div [innerHtml]="getChatInitialTime(item, i)"></div>
+
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+                <div class="ms-panel-footer p-4">
+                    <div class="ms-chat-textbox">
+                        <ul class="ms-list-flex mb-0">
+                            <li class="ms-chat-vn"><i class="material-icons">mic</i> </li>
+                            <li class="ms-chat-input">
+                                <input type="text" name="msg" placeholder="Enter Message">
+                            </li>
+                            <li>
+                                <ul class="ms-chat-text-controls ms-list-flex">
+                                    <li> <i class="material-icons">tag_faces</i> </li>
+                                    <li> <i class="material-icons">attach_file</i> </li>
+                                    <li> <i class="material-icons">camera_alt</i> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

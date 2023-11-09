@@ -1,0 +1,103 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Slider</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use
+                        <code>[showNavigationArrows]="false",[showNavigationIndicators]="false"</code> in
+                        <code>ngb-carousel</code> to disable
+                        autoplay
+                    </p>
+                    <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.img" alt="Random third slide">
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Slider with Arrows and Captions</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>[showNavigationArrows]="true"</code> in <code>ngb-carousel</code>
+                        to enable autoplay and specify a specific time between each slide</p>
+                    <ngb-carousel class="ms-arrow-slider" [showNavigationArrows]="true"
+                        [showNavigationIndicators]="false">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.img" alt="{{item.title}}">
+                            <div class="carousel-caption" class="d-none d-md-block carousel-caption">
+                                <h5>{{item.title}}</h5>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Slider with Buttons</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ngb-carousel class="ms-button-slider text-center" [showNavigationArrows]="true"
+                        [showNavigationIndicators]="false">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.img" alt="{{item.title}}">
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Slider with Indicators</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ngb-carousel class="ms-indicator-slider d-flex" [showNavigationArrows]="false"
+                        [showNavigationIndicators]="true">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.img" alt="{{item.title}}">
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Slider with Dotted Indicator</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ngb-carousel class="ms-dotted-indicator-slider" [showNavigationArrows]="true"
+                        [showNavigationIndicators]="true">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.bigimg" alt="{{item.title}}">
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Slider Images</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ngb-carousel class="ms-image-slider" [showNavigationArrows]="false"
+                        [showNavigationIndicators]="true">
+                        <ng-template ngbSlide *ngFor="let item of defaultslide">
+                            <img [src]="item.bigimg" alt="{{item.title}}">
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

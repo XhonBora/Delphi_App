@@ -1,0 +1,68 @@
+<ul class="ms-qa-options">
+    <li> <a href="javascript:void(0)" (click)="open(notesModal)"> <i class="flaticon-sticky-note"></i> New Note </a> </li>
+    <li> <a routerLink="/"> <i class="flaticon-excel"></i> Export to Excel </a> </li>
+</ul>
+<perfect-scrollbar class="ms-quickbar-container ms-scrollable">
+    <div class="ms-card ms-qa-card ms-deletable" *ngFor="let item of notespost">
+        <div class="ms-card-header">
+            <h6 class="ms-card-title">{{item.title}}</h6>
+        </div>
+        <div class="ms-card-body">
+            <p>{{item.text}}</p>
+            <ul class="ms-note-members clearfix mb-0">
+                <li class="ms-deletable" *ngFor="let member of item.members"> 
+                    <img src="{{member.img}}" alt="member"> 
+                </li>
+            </ul>
+        </div>
+        <div class="ms-card-footer clearfix">
+            <div class="dropdown float-left" ngbDropdown>
+                <a href="javascript:void(0);" class="text-disabled toggle-icon-none" ngbDropdownToggle>
+                    <i class="flaticon-share-1"></i> Share
+                </a>
+                <ul ngbDropdownMenu class="dropdown-menu">
+                    <li class="dropdown-menu-header">
+                        <h6 class="dropdown-header ms-inline m-0"><span class="text-disabled">Share With</span></h6>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <perfect-scrollbar class="ms-scrollable ms-dropdown-list ms-members-list">
+                        <a class="media p-2" routerLink="/" *ngFor="let user of item.shareuser">
+                            <div class="mr-2 align-self-center">
+                                <img src="{{user.img}}" class="ms-img-round" alt="{{user.name}}">
+                            </div>
+                            <div class="media-body">
+                                <span>{{user.name}}</span>
+                            </div>
+                        </a>
+                    </perfect-scrollbar>
+                </ul>
+            </div>
+            <div class="ms-note-editor float-right">
+                <a routerLink="/" class="text-disabled mr-2"> <i class="flaticon-pencil"> </i> Edit </a>
+                <a href="javascript:void(0)" class="text-disabled  ms-delete-trigger" (click)="removeItem(item)"> <i class="flaticon-trash"> </i> Delete </a>
+            </div>
+        </div>
+    </div>
+</perfect-scrollbar>
+<ng-template #notesModal let-modal>
+    <div class="modal-header bg-secondary">
+        <h5 class="modal-title has-icon text-white"> New Note</h5>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+            <span>×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="ms-form-group">
+            <label>Note Title</label>
+            <input type="text" class="form-control" [(ngModel)]="noteTitle">
+        </div>
+        <div class="ms-form-group">
+            <label>Note Description</label>
+            <textarea class="form-control" [(ngModel)]="noteDesc"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-secondary shadow-none" (click)="onClick(); modal.dismiss('Cross click')">Add Note</button>
+    </div>
+</ng-template>

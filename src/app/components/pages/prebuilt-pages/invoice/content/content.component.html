@@ -1,0 +1,69 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header header-mini">
+                    <div class="d-flex justify-content-between">
+                        <h6>Invoice</h6>
+                        <h6>#135178</h6>
+                    </div>
+                </div> 
+                <div class="ms-panel-body">
+                    <!-- Invoice To --> 
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="invoice-address">
+                                <h3>Reciever: </h3>
+                                <h5>Anny Farisha</h5>
+                                <p>Anny.123@hotmail.com</p>
+                                <p class="mb-0">1642 Cambridge Drive, Phoenix, 85029 Arizona</p>
+                                <p class="mb-0">Arizona</p>
+                                <p>Phoenix</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                            <ul class="invoice-date">
+                                <li>Invoice Date : Saturday, January 07 2022</li>
+                                <li>Due Date : Sunday, January 19 2022</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Invoice Table -->
+                    <div class="ms-invoice-table table-responsive mt-5">
+                        <table class="table table-hover text-right thead-light">
+                            <thead>
+                                <tr class="text-capitalize">
+                                    <th class="text-center w-5">id</th>
+                                    <th class="text-left">description</th>
+                                    <th>qty</th>
+                                    <th>Unit Cost</th>
+                                    <th>total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of invoiceproductlist">
+                                    <td class="text-center">{{item.id}}</td>
+                                    <td class="text-left">{{item.productname}}</td>
+                                    <td>{{item.qty}}</td>
+                                    <td>${{item.cost | number:'1.2-2'}}</td>
+                                    <td>${{item.qty * item.cost | number:'1.2-2'}}</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Total Cost: </td>
+                                    <td>${{calculateprice() | number:'1.2-2'}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="invoice-buttons text-right">
+                        <button type="button" class="btn btn-primary mr-2">Print Invoice</button>
+                        <button type="button" class="btn btn-primary">Send Invoice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

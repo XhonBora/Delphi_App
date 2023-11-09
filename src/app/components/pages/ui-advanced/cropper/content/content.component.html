@@ -1,0 +1,85 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Cropper</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="ms-cropper-container mb-2">
+                        <angular-cropper #defaultCropper [cropperOptions]="defaultconfig" [imageUrl]="defaultimageUrl">
+                        </angular-cropper>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-6 col-sm-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Disabled Zoom Cropper</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="ms-cropper-container mb-2">
+                        <angular-cropper #disablezoomCropper [cropperOptions]="disablezoomconfig"
+                            [imageUrl]="disablezoomimageUrl"></angular-cropper>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Cropper with Controls</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-xl-9 col-md-12">
+                            <div class="ms-cropper-container">
+                                <angular-cropper #controlsCropper [cropperOptions]="controlsconfig"
+                                    [imageUrl]="controlsimageUrl"></angular-cropper>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-12 p-0">
+                            <div class="row col-12 m-auto">
+                            <div class="ms-crop-preview ms-crop-preview-lg col-xl-12 col-md-4 w-100"></div>
+                            <div class="ms-crop-preview ms-crop-preview-md col-xl-12 col-md-4 w-100"></div>
+                            <div class="ms-crop-preview ms-crop-preview-sm col-xl-12 col-md-4 w-100"></div>
+                        </div>
+                        </div>
+                        <div class="col-xl-9 col-md-12">
+                            <div class="ms-cropper-controls">
+                                <button type="button" placement="top" ngbTooltip="Zoom In"
+                                    class="ms-btn-icon btn-primary" (click)="zoomIn($event)"><i
+                                        class="material-icons">zoom_in</i></button>
+                                <button type="button" placement="top" ngbTooltip="Zoom Out"
+                                    class="ms-btn-icon btn-primary" (click)="zoomOut($event)"><i class="material-icons">zoom_out</i></button>
+                                <button type="button" placement="top" ngbTooltip="Rotate Right"
+                                    class="ms-btn-icon btn-primary" (click)="rotateRight($event)"><i class="material-icons">rotate_right</i></button>
+                                <button type="button" placement="top" ngbTooltip="Rotate Left"
+                                    class="ms-btn-icon btn-primary" (click)="rotateLeft($event)"><i class="material-icons">rotate_left</i></button>
+                                <button type="button" placement="top" ngbTooltip="Move Left"
+                                    class="ms-btn-icon btn-primary" (click)="moveLeft($event)"><i class="material-icons">arrow_back</i></button>
+                                <button type="button" placement="top" ngbTooltip="Move Down"
+                                    class="ms-btn-icon btn-primary" (click)="moveDown($event)"><i
+                                        class="material-icons">arrow_downward</i></button>
+                                <button type="button" placement="top" ngbTooltip="Move Right"
+                                    class="ms-btn-icon btn-primary" (click)="moveRight($event)"><i class="material-icons">arrow_forward</i></button>
+                                <button type="button" placement="top" ngbTooltip="Move Up"
+                                    class="ms-btn-icon btn-primary" (click)="moveUp($event)"><i class="material-icons">arrow_upward</i></button>
+                                <button type="button" placement="top" ngbTooltip="Lock"
+                                    class="ms-btn-icon btn-primary" (click)="lock($event)"><i class="material-icons">lock_outline</i></button>
+                                <button type="button" placement="top" ngbTooltip="Unlock"
+                                    class="ms-btn-icon btn-primary" (click)="unLock($event)"><i class="material-icons">lock_open</i></button>
+                                <button type="button" placement="top" ngbTooltip="Reset"
+                                    class="ms-btn-icon btn-primary" (click)="reset($event)"><i class="material-icons">refresh</i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

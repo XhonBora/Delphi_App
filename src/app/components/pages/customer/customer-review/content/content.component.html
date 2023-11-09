@@ -1,0 +1,49 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+    </div>
+    <div class="ms-content-wrapper">
+        <div class="row">
+            <!-- Recent Support Tickets -->
+            <div class="col-xl-12 col-md-12">
+                <div class="ms-panel ms-panel-fh">
+                    <div class="ms-panel-body p-0">
+                        <ul class="ms-list ms-feed ms-twitter-feed ms-recent-support-tickets">
+                            <li class="ms-list-item" *ngFor="let item of customerreview">
+                                <a routerLink="/" class="media clearfix">
+                                    <img [src]="item.img" class="ms-img-round ms-img-small" [alt]="item.name">
+                                    <div class="media-body">
+                                        <div class="customer-meta">
+                                            <div class="new">
+                                                <h5 class="ms-feed-user mb-0">{{item.name}}</h5>
+                                                <h6 class="ml-4 mb-0 text-red">{{item.productname}}</h6>
+                                            </div>
+                                            <ngb-rating [max]="5" [(rate)]="item.rating" class="ms-star-rating rating-fill rating-circle ratings-new" [readonly]="true">
+                                                <ng-template let-fill="fill" let-index="index">
+                                                    <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                                            class="material-icons">star</i> </li>
+                                                </ng-template>
+                                            </ngb-rating>
+                                        </div> <span class="my-2 d-block"> <i class="material-icons">date_range</i> {{item.commentdate}}</span>
+                                        <p class="d-block">{{item.comment}}</p>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div class="ms-feed-controls"> <span>
+                                                    <i class="material-icons">chat</i> {{item.replies}}
+                                                </span>
+                                                <span>
+                                                    <i class="material-icons">attachment</i> {{item.attachment}}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

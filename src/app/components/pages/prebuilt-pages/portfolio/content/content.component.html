@@ -1,0 +1,46 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Portfolio</h6>
+                </div>
+                <div class="ms-panel-body pb-0">
+                    <div class="ms-portfolio card-columns">
+                        <a routerLink="/" class="card ms-portfolio-item" *ngFor="let item of defaultportfolio">
+                            <img src="{{item.photo}}" alt="{{item.title}}">
+                            <div class="ms-portfolio-item-content">
+                                <h4>{{item.title}}</h4>
+                                <div class="item-content-inner">
+                                    <span>
+                                        <i class="material-icons">thumb_up</i> {{item.likes}}
+                                    </span>
+                                    <span>
+                                        <i class="material-icons">chat_bubble</i> {{item.comments}}
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Minimal Portfolio</h6>
+                </div>
+                <div class="ms-panel-body pb-0">
+                    <div class="ms-portfolio ms-portfolio-minimal card-columns">
+                        <a class="card ms-portfolio-item" routerLink="/" *ngFor="let item of minimalportfolio">
+                            <img src="{{item.photo}}" alt="{{item.name}}">
+                            <div class="ms-portfolio-item-content">
+                                <h4>{{item.name}}</h4>
+                                <p>{{item.desc}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

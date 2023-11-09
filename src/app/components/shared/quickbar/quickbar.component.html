@@ -1,0 +1,32 @@
+<aside id="ms-quick-bar" class="ms-quick-bar fixed ms-d-block-lg">
+    <ul ngbNav #nav="ngbNav" [sortablejs]="quickbardata" class="nav nav-tabs ms-quick-bar-list" id="ms-quick-bar-list">
+        <li [ngbNavItem]="item.id" class="ms-quick-bar-item ms-has-qa sortableitem" placement="left"
+            [ngbTooltip]="item.tooltip" *ngFor="let item of quickbardata">
+            <a ngbNavLink (click)="openBar()">
+                <i [class]="item.icon"></i>
+            </a>
+            <ng-template ngbNavContent>
+                <app-todolist *ngIf="item.name === 'To-do'"></app-todolist>
+                <app-reminders *ngIf="item.name === 'Reminder'"></app-reminders>
+                <app-notes *ngIf="item.name === 'Notes'"></app-notes>
+                <app-invite *ngIf="item.name === 'Invite'"></app-invite>
+                <app-settings *ngIf="item.name === 'Settings'"></app-settings>
+            </ng-template>
+        </li>
+    </ul>
+    <div class="ms-configure-qa" placement="left" ngbTooltip="Configure Quick Access">
+        <a href="javascript:void(0);" (click)="toggleConfigure()">
+            <i class="flaticon-hammer"></i>
+        </a>
+    </div>
+    <!-- Quick bar Content -->
+    <div class="ms-quick-bar-content" id="ms-quick-bar-content">
+        <div class="ms-quick-bar-header clearfix">
+            <h5 class="ms-quick-bar-title float-left">Title</h5>
+            <button type="button" class="close ms-toggler" (click)="closeBar()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div [ngbNavOutlet]="nav" class="ms-quick-bar-body"></div>
+    </div>
+</aside>

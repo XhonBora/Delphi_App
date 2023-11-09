@@ -1,0 +1,187 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Table</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.table-bordered</code> in the <code>table</code></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Buyer</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.buyer}}</td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Highlighted Table Head</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.thead-{{'{state}'}}</code> in the <code>table</code></p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered thead-primary mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Buyer</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.buyer}}</td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Striped Table</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.table-striped</code> in the <code>table</code></p>
+                    <div class="table-responsive">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Buyer</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.buyer}}</td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Hoverable Table</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.table-hover</code> in the <code>table</code></p>
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-primary mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Buyer</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.buyer}}</td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Table with Image</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">User</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <td class="ms-table-f-w">
+                                        <img src="{{item.photo}}" alt="{{item.buyer}}">
+                                        {{item.buyer}}
+                                    </td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Reponsive Table</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Wrap <code>table</code> in the <code>.table-responsive</code></p>
+                    <div class="table-responsive">
+                        <table class="table thead-primary mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Buyer</th>
+                                    <th scope="col">Service</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of tabledata">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.buyer}}</td>
+                                    <td>{{item.service}}</td>
+                                    <td>{{item.productid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

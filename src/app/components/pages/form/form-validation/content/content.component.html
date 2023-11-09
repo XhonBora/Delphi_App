@@ -1,0 +1,70 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Validation</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.{{'{valid|invalid}'}}-feedback</code> right after <code>input</code> for a validation message </p>
+                    <form [formGroup]="defaultForm" (validSubmit)="onSubmit()">
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom01">First name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="First name" formControlName="Firstname" id="validationCustom01">
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label>Last name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Last name" formControlName="Lastname">
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label>Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" formControlName="Username">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label>City</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="City" formControlName="City">
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label>State</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="State" formControlName="State">
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label>Zip</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Zip" formControlName="Zipcode">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check pl-0">
+                                <label class="ms-checkbox-wrap">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                    <i class="ms-checkbox-check"></i>
+                                </label>
+                                <span> Agree to terms and conditions </span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

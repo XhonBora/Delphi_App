@@ -1,0 +1,389 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="db-header-title">Welcome, Anny</h1>
+        </div>
+        <!-- Audience Metrics -->
+        <div class="col-xl-7 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header header-mini">
+                    <div class="d-flex justify-content-between">
+                        <h6>Website Audience Metrics</h6>
+                        <div class="btn-group btn-group-toggle ms-graph-metrics" ngbRadioGroup name="radioBasic"
+                            [(ngModel)]="model">
+                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary day">
+                                <input ngbButton type="radio" [value]="1" (click)="day()"> Day
+                            </label>
+                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary month">
+                                <input ngbButton type="radio" value="middle" (click)="month()"> Month
+                            </label>
+                            <label ngbButtonLabel class="btn btn-sm btn-outline-primary year">
+                                <input ngbButton type="radio" [value]="false" (click)="year()"> Year
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between ms-graph-meta">
+                        <ul class="ms-list-flex">
+                            <li>
+                                <span>Page Views</span>
+                                <h3 class="ms-count">95,703</h3>
+                            </li>
+                            <li>
+                                <span>Bounce Rate</span>
+                                <h3 class="ms-count">19.03%</h3>
+                            </li>
+                            <li>
+                                <span>Sessions</span>
+                                <h3 class="ms-count">12,785</h3>
+                            </li>
+                        </ul>
+                        <div class="ms-graph-labels">
+                            <span class="ms-graph-decrease"></span>
+                            <p>Traffic</p>
+                            <span class="ms-graph-regular"></span>
+                            <p>Sales</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-panel-body">
+                    <canvas baseChart [datasets]="audienceChartData" [labels]="audienceChartLabels"
+                        [options]="audienceChartOptions" [chartType]="lineChartType">
+                    </canvas>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Session by Channel</h6>
+                    <p>Track all sessions by channel</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-light mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Channel</th>
+                                    <th scope="col">Sessions</th>
+                                    <th scope="col">Previous Period</th>
+                                    <th scope="col">Change</th>
+                                    <th scope="col">Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>208,874</td>
+                                    <td>106,849</td>
+                                    <td class="ms-text-success">+17.24%</td>
+                                    <td class="ms-trend"> <canvas baseChart [datasets]="trend1ChartData"
+                                            [labels]="channelChartLabels" [options]="channelChartOptions"
+                                            [chartType]="lineChartType">
+                                        </canvas> </td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>208,874</td>
+                                    <td>106,849</td>
+                                    <td class="ms-text-danger">-2.33%</td>
+                                    <td class="ms-trend"> <canvas baseChart [datasets]="trend2ChartData"
+                                        [labels]="channelChartLabels" [options]="channelChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>  </td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>208,874</td>
+                                    <td>106,849</td>
+                                    <td class="ms-text-success">+1.97%</td>
+                                    <td class="ms-trend"> <canvas baseChart [datasets]="trend3ChartData"
+                                        [labels]="channelChartLabels" [options]="channelChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>  </td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>208,874</td>
+                                    <td>106,849</td>
+                                    <td class="ms-text-success">+7.14%</td>
+                                    <td class="ms-trend"> <canvas baseChart [datasets]="trend4ChartData"
+                                        [labels]="channelChartLabels" [options]="channelChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>  </td>
+                                </tr>
+                                <tr>
+                                    <td>Organic Search</td>
+                                    <td>208,874</td>
+                                    <td>106,849</td>
+                                    <td class="ms-text-danger">-27.45%</td>
+                                    <td class="ms-trend"> <canvas baseChart [datasets]="trend5ChartData"
+                                        [labels]="channelChartLabels" [options]="channelChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>  </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Page Views by Title</h6>
+                    <p>Keep track of the pages being viewed</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-light mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Page Name</th>
+                                    <th scope="col">Page URL</th>
+                                    <th scope="col">Average Traffic</th>
+                                    <th scope="col">Impressions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of pageviewTable">
+                                    <td>{{item.pagename}}</td>
+                                    <td>{{item.url}}</td>
+                                    <td>{{item.traffic}}%</td>
+                                    <td class="ms-text-success" *ngIf="item.positive">+{{item.impression}}%</td>
+                                    <td class="ms-text-danger" *ngIf="!item.positive">-{{item.impression}}%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-5 col-md-12">
+            <!-- Website Performance -->
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Google Analytics Website Performance</h6>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <ul class="ms-list ms-website-performance clearfix">
+                        <li class="ms-list-item">
+                            <h4>Bounce Rate (Avg)</h4>
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="website-performance-canvas">
+                                    <canvas baseChart [datasets]="bouncerateChartData"
+                                        [labels]="WebChartLabels" [options]="WebChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>
+                                </div>
+                                <div class="website-performance-meta">
+                                    <p class="ms-text-dark">45.07%</p>
+                                    <p class="ms-text-success">+28.44%</p>
+                                    <p>VS 66.68% (Prev)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ms-list-item">
+                            <h4>Page Views (Avg)</h4>
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="website-performance-canvas">
+                                    <canvas baseChart [datasets]="pageviewsChartData"
+                                        [labels]="WebChartLabels" [options]="WebChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>
+                                </div>
+                                <div class="website-performance-meta">
+                                    <p class="ms-text-dark">4.30%</p>
+                                    <p class="ms-text-danger">-28.44%</p>
+                                    <p>VS 1.90% (Prev)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ms-list-item">
+                            <h4>New Sessions</h4>
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="website-performance-canvas">
+                                    <canvas baseChart [datasets]="newsessionsChartData"
+                                        [labels]="WebChartLabels" [options]="WebChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>
+                                </div>
+                                <div class="website-performance-meta">
+                                    <p class="ms-text-dark">5.75%</p>
+                                    <p class="ms-text-danger">-2.41%</p>
+                                    <p>VS 8.75% (Prev)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ms-list-item">
+                            <h4>Time on Site (Avg)</h4>
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="website-performance-canvas">
+                                    <canvas baseChart [datasets]="timesiteChartData"
+                                        [labels]="WebChartLabels" [options]="WebChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>
+                                </div>
+                                <div class="website-performance-meta">
+                                    <p class="ms-text-dark">8m:55s</p>
+                                    <p class="ms-text-success">+50.07%</p>
+                                    <p>VS 66.88% (Prev)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="ms-list-item">
+                            <h4>Site Impressions (Avg)</h4>
+                            <div class="d-flex justify-content-between align-items-end">
+                                <div class="website-performance-canvas">
+                                    <canvas baseChart [datasets]="siteimpressionsChartData"
+                                        [labels]="WebChartLabels" [options]="WebChartOptions"
+                                        [chartType]="lineChartType">
+                                    </canvas>
+                                </div>
+                                <div class="website-performance-meta">
+                                    <p class="ms-text-dark">17.03%</p>
+                                    <p class="ms-text-success">+15.03%</p>
+                                    <p>VS 12.09% (Prev)</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Sessions by Device -->
+            <div class="ms-panel ms-device-sessions">
+                <div class="ms-panel-header">
+                    <h6>Google Analytics Sessions by Device</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <i class="material-icons bg-primary">desktop_windows</i>
+                            <h4>Desktop</h4>
+                            <p class="ms-text-primary">45.07%</p>
+                            <p class="ms-text-primary">201,434</p>
+                        </div>
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <i class="material-icons bg-danger">tablet_mac</i>
+                            <h4>Tablet</h4>
+                            <p class="ms-text-danger">29.05%</p>
+                            <p class="ms-text-danger">134,693</p>
+                        </div>
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <i class="material-icons bg-warning">phone_iphone</i>
+                            <h4>Mobile</h4>
+                            <p class="ms-text-warning">18.43%</p>
+                            <p class="ms-text-warning">81,525</p>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 45.07%"
+                            aria-valuenow="45.07" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 29.05%"
+                            aria-valuenow="29.05" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25.48%"
+                            aria-valuenow="25.48" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="ms-panel-footer">
+                    <h6>Previous Result</h6>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <h4 class="ms-text-primary">Desktop</h4>
+                            <p class="ms-text-dark">45.07%</p>
+                            <p>201,434</p>
+                        </div>
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <h4 class="ms-text-danger">Tablet</h4>
+                            <p class="ms-text-dark">39.00%</p>
+                            <p>134,693</p>
+                        </div>
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-4 ms-device">
+                            <h4 class="ms-text-warning">Mobile</h4>
+                            <p class="ms-text-dark">19.45%</p>
+                            <p>81,525</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-5 col-md-12">
+            <div class="ms-panel ms-widget">
+                <div class="ms-panel-header">
+                    <h6>Top User Activity By Country</h6>
+                    <p>Users activity performance and bounce rate based on country</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-light mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Country</th>
+                                    <th scope="col">Entrances</th>
+                                    <th scope="col">Bounce Rate</th>
+                                    <th scope="col">Exits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of userActivity">
+                                    <th scope="row"> <img [src]="item.countryflag" alt="flags"></th>
+                                    <td>{{item.entrance | number:'1.2-2'}}</td>
+                                    <td>{{item.bouncerate | number:'1.2-2'}}%</td>
+                                    <td>{{item.exits | number:'1.2-2'}}%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-7 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header header-mini">
+                    <h6>Average Users By Country</h6>
+                    <p>The top locations where users of your product are located</p>
+                </div>
+                <div class="ms-panel-body ms-average-users-country">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-12">
+                            <span class="progress-label">United States</span>
+                            <span class="progress-status">14,805</span>
+                            <div class="progress progress-tiny">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="progress-label">Brazil</span>
+                            <span class="progress-status">11,651</span>
+                            <div class="progress progress-tiny">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"
+                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="progress-label">Russia</span>
+                            <span class="progress-status">9,157</span>
+                            <div class="progress progress-tiny">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="progress-label">India</span>
+                            <span class="progress-status">7,846</span>
+                            <div class="progress progress-tiny">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%"
+                                    aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="progress-label">Australia</span>
+                            <span class="progress-status">6,789</span>
+                            <div class="progress progress-tiny mb-0">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 30%"
+                                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <div class="offset-xl-1 col-xl-7 col-md-12">
+                            <highcharts-chart class="vector-map" [Highcharts]="worldMap"
+                                [constructorType]="worldMapchartConstructor" [options]="worldMapchartOptions"
+                                style="width: 100%; display: block;">
+                            </highcharts-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Sweet Alerts</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Check <code>/assets/js/sweet-alerts.js</code> for reference</p>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6 class="section-title">Basic Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0"
+                                [swal]="['The Internet?', 'That thing is still around?', 'question']">Click Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Alert with Footer</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="withfooter">Click
+                                Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Positioned Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="positioned">Click
+                                Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Alert with HTML</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="withhtml">Click
+                                Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Advanced Alerts</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6 class="section-title">Multi Step Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="multistep">Click
+                                Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Auto Close Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="autoclose">Click
+                                Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">AJAX Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="ajax">Click
+                                Me</button>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="section-title">Custom Alert</h6>
+                            <button type="button" class="btn btn-primary trigger-swal mt-0" [swal]="custom">Click
+                                Me</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- With Footer -->
+<swal #withfooter icon="warning" type="error" title="Oops..." text="Something went wrong!"
+    footer="<a href='#'>Why do I have this issue?</a>"></swal>
+<!-- Postitioned -->
+<swal #positioned position="top-end" icon="success" title="Your work has been saved" showConfirmButton=false timer=1500>
+</swal>
+<!-- With HTML -->
+<swal #withhtml title="<strong>HTML <u>example</u></strong>" icon="info"
+    html="You can use <b>bold text</b> <a href='#'>links</a> and other HTML tags" showCloseButton=true
+    showCancelButton=true focusConfirm=false confirmButtonText="Great!" confirmButtonAriaLabel="Thumbs up, great!"
+    cancelButtonText="Close" cancelButtonAriaLabel="Thumbs down"></swal>
+<!-- Multistep -->
+<swal #multistep (confirm)="deleteQuestion()" [swalOptions]="Step1"></swal>
+<swal #successSwal [swalOptions]="Step2"></swal>
+<!-- Auto Close -->
+<swal #autoclose title='Auto close alert!' html='I will close in <strong>2000</strong> seconds.' timer=2000></swal>
+<!-- Ajax -->
+<swal #ajax title='Your public IP' confirmButtonText='Show my public IP'
+    text='Your public IP will be received via AJAX request' showLoaderOnConfirm= true></swal>
+<!-- Custom -->
+<swal #custom title='Sweet!' text='Modal with a custom image.' imageUrl='assets/img/misc/misc-1.jpg'
+    imageWidth=400 imageHeight=200 imageAlt='Custom image' animation=false></swal>

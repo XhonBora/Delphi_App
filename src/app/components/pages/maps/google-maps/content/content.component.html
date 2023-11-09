@@ -1,0 +1,112 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Basic Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Map Without Controls</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="true">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Propia Theme Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="propiaStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Avocado Theme Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="avocadoStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Night Mode Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="nightStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Apple Theme Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="appleStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Captor Theme Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="captorStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Nature Theme Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="map-container">
+                        <agm-map class="google-map" [styles]="natureStyles" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        </agm-map>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

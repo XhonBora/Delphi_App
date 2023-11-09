@@ -1,0 +1,85 @@
+<div class="ms-content-wrapper produt-detail">
+    <div class="row" *ngFor="let item of productdetails">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Product Details</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ngb-carousel class="ms-arrow-slider" [showNavigationArrows]="true"
+                        [showNavigationIndicators]="false">
+                        <ng-template ngbSlide *ngFor="let image of item.img">
+                            <img [src]="image" alt="{{item.name}}">
+                            <div class="carousel-caption" class="d-none d-md-block carousel-caption">
+                                <h5>{{item.name}}</h5>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-body">
+                    <h4 class="section-title bold">Product Info</h4>
+                    <table class="table ms-profile-information">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Price</th>
+                                <td>${{item.price | number:'1.2-2'}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Product Quantity</th>
+                                <td>{{item.qty | number:'1.0-0'}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Availiblity</th>
+                                <td>
+                                    <span class="badge badge-pill badge-primary"
+                                        *ngIf="item.status === 'Out Of Stock'">Out of Stock</span>
+                                    <span class="badge badge-pill badge-success" *ngIf="item.status === 'In Stock'">In
+                                        Stock</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Delivery Charges</th>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">SKU Identification</th>
+                                <td>{{item.id | number:'1.0-0'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="new">
+                        <button type="button" class="btn btn-primary">Edit</button>
+                        <button type="button" class="btn btn-secondary">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-body">
+                    <h4 class="section-title bold">Product Details </h4>
+                    <p class="description">{{item.longdesc}}</p>
+                </div>
+                <div class="ms-quick-stats">
+                    <div class="ms-stats-grid">
+                        <i class="fa fa-bullhorn"></i>
+                        <p class="ms-text-dark">1,033</p>
+                        <span>Today Order</span>
+                    </div>
+                    <div class="ms-stats-grid">
+                        <i class="fa fa-heart"></i>
+                        <p class="ms-text-dark">3,039</p>
+                        <span>Favourite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

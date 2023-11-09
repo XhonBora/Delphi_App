@@ -1,0 +1,24 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Product Sale</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row mb-3">
+                        <div class="col-lg-3 col-md-6">
+                            <input #search class="search" class="form-control" type="text" placeholder="Search..." (keydown.enter)="onSearch(search.value)">
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <ng2-smart-table [settings]="settings" [source]="source" class="table table-hover w-100"></ng2-smart-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

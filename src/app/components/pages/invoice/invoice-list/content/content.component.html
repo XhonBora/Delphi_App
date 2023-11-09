@@ -1,0 +1,46 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="col-12">
+                <div class="ms-panel">
+                    <div class="ms-panel-header">
+                        <h6>Invoice List</h6>
+                    </div>
+                    <div class="ms-panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover thead-primary mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Invoice ID</th>
+                                        <th scope="col">Order Name</th>
+                                        <th scope="col">Order Id</th>
+                                        <th scope="col">Invoice Date</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Total Bill</th>
+                                        <th scope="col">Send Invoice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of invoicelist">
+                                        <th scope="row">{{item.invoiceid}}</th>
+                                        <td>{{item.ordername}}</td>
+                                        <td>{{item.orderid}}</td>
+                                        <td>{{item.invoicedate}}</td>
+                                        <td>{{item.qty}}</td>
+                                        <td>${{item.price | number:'1.2-2'}}</td>
+                                        <td>${{item.price * item.qty | number:'1.2-2'}}</td>
+                                        <td><a routerLink="/"><i class='fas fa-paper-plane text-success'></i></a> <a
+                                                routerLink="/"><i class='far fa-trash-alt ms-text-danger'></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

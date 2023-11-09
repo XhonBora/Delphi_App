@@ -1,0 +1,62 @@
+<perfect-scrollbar class="ms-quickbar-container ms-todo-list-container ms-scrollable" style="height: calc(100vh - 100px);">
+    <div class="ms-add-task-block">
+        <div class="form-group mx-3 mt-0  fs-14 clearfix">
+            <input type="text" class="form-control fs-14 float-left" id="task-block" name="todo-block"
+                placeholder="Add Task Block" [(ngModel)]="taskBlock">
+            <button type="button" class="ms-btn-icon bg-primary float-right" (click)="onClick()">
+                <i class="material-icons text-disabled">add</i>
+            </button>
+        </div>
+    </div>
+    <ul class="ms-todo-list">
+        <li class="ms-card ms-qa-card ms-deletable" *ngFor="let item of taskbox; let i = index;">
+            <div class="ms-card-header clearfix">
+                <h6 class="ms-card-title">{{item.maintitle}}</h6>
+                <button placement="left" ngbTooltip="Add a Task to this block"
+                    class="ms-add-task-to-block ms-btn-icon float-right" type="button" (click)="open(taskModal, i)"> <i
+                        class="material-icons text-disabled">add</i> </button>
+            </div>
+            <div class="ms-card-body">
+                <ul class="ms-list ms-task-block">
+                    <li class="ms-list-item ms-to-do-task ms-deletable"
+                        *ngFor="let task of item.tasklist; let i = index;"
+                        [ngClass]="task.state == true ? 'task-complete' : ''">
+                        <label class="ms-checkbox-wrap ms-todo-complete">
+                            <input type="checkbox" value="" (click)="taskComplete(task)">
+                            <i class="ms-checkbox-check"></i>
+                        </label>
+                        <span> {{task.title}} </span>
+                        <button type="button" class="close">
+                            <i class="flaticon-trash ms-delete-trigger" (click)="removeTask(i)"> </i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="ms-card-footer clearfix">
+                <a routerLink="/" class="text-disabled mr-2"> <i class="flaticon-archive"> </i> Archive </a>
+                <a href="javascript:void(0);" class="text-disabled ms-delete-trigger float-right"
+                    (click)="removeItem(item)">
+                    <i class="flaticon-trash"> </i> Delete
+                </a>
+            </div>
+        </li>
+    </ul>
+</perfect-scrollbar>
+<ng-template #taskModal let-modal>
+    <div class="modal-header bg-secondary">
+        <h5 class="modal-title has-icon text-white"> New Task</h5>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+            <span>×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="ms-form-group">
+            <label>Task Title</label>
+            <input type="text" class="form-control" [(ngModel)]="taks" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-secondary shadow-none" (click)="onClickTask(); modal.dismiss('Cross click')">Add Task</button>
+    </div>
+</ng-template>

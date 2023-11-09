@@ -1,0 +1,292 @@
+<!-- Body Content Wrapper -->
+<div class="ms-content-wrapper cardspage">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Basic Image Card</h2>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+            <div class="ms-card">
+                <div class="ms-card-img">
+                    <img src="{{item.img}}" alt="{{item.title}}">
+                </div>
+                <div class="ms-card-body">
+                    <h6>{{item.title}}</h6>
+                    <p>{{item.text}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Image Card with Button</h2>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+            <div class="ms-card">
+                <div class="ms-card-img">
+                    <img src="{{item.img}}" alt="{{item.title}}">
+                </div>
+                <div class="ms-card-body">
+                    <h6>{{item.title}}</h6>
+                    <p>{{item.text}}</p>
+                    <a routerLink="/" class="btn btn-primary btn-block">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Social Post Cards</h2>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let item of socialcards">
+            <div class="ms-card">
+                <div class="ms-card-body">
+                    <div class="media fs-14">
+                        <div class="mr-2 align-self-center">
+                            <img src="{{item.userimg}}" class="ms-img-round" alt="{{item.username}}">
+                        </div>
+                        <div class="media-body">
+                            <h6>{{item.username}} </h6>
+                            <div class="dropdown float-right" ngbDropdown>
+                                <a href="javascript:void(0);" class="toggle-icon-none" ngbDropdownToggle>
+                                    <i class="material-icons">more_vert</i>
+                                </a>
+                                <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                                    <li class="ms-dropdown-list">
+                                        <a class="media p-2" routerLink="/">
+                                            <div class="media-body">
+                                                <span>Comment</span>
+                                            </div>
+                                        </a>
+                                        <a class="media p-2" routerLink="/">
+                                            <div class="media-body">
+                                                <span>Share</span>
+                                            </div>
+                                        </a>
+                                        <a class="media p-2" routerLink="/">
+                                            <div class="media-body">
+                                                <span>Favorite</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="fs-12 my-1 text-disabled">{{item.time}}</p>
+                        </div>
+                    </div>
+                    <h6>{{item.title}}</h6>
+                    <p>{{item.text}}</p>
+                </div>
+                <div class="ms-card-img">
+                    <img src="{{item.postimg}}" alt="{{item.title}}">
+                </div>
+                <div class="ms-card-footer text-disabled d-flex">
+                    <div class="ms-card-options">
+                        <i class="material-icons">favorite</i> {{item.likes}}
+                    </div>
+                    <div class="ms-card-options">
+                        <i class="material-icons">comment</i> {{item.comments}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Cards With States</h2>
+            <p class="ms-directions">Use <code>.card-{{'{state}'}}</code> for different states</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-primary">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-secondary">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-success">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-warning">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-danger">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-info">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-dark">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Cards With Gradients</h2>
+            <p class="ms-directions">Use <code>.card-gradient-{{'{state}'}}</code> for different states</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-primary">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-secondary">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-success">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-warning">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-danger">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-info">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-light">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card card-gradient-dark">
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h2 class="section-title">Cards With Header and Footer</h2>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card">
+                <div class="ms-card-header">
+                    <h6>Lorem Ipsum Corporate</h6>
+                </div>
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+                <div class="ms-card-footer text-disabled d-flex">
+                    <div class="ms-card-options">
+                        <i class="material-icons">favorite</i> 982
+                    </div>
+                    <div class="ms-card-options">
+                        <i class="material-icons">comment</i> 785
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card">
+                <div class="ms-card-header">
+                    <h6>Lorem Ipsum Corporate</h6>
+                </div>
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+                <div class="ms-card-footer">
+                    <a routerLink="/">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card">
+                <div class="ms-card-header">
+                    <h6>Lorem Ipsum Corporate</h6>
+                </div>
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+                <div class="ms-card-footer text-center">
+                    <a routerLink="/">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ms-card">
+                <div class="ms-card-header">
+                    <h6>Lorem Ipsum Corporate</h6>
+                </div>
+                <div class="ms-card-body">
+                    <h6>This is a card Title</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nunc velit, dictum eget nulla a, sollicitudin rhoncus orci. Vivamus nec commodo turpis.</p>
+                </div>
+                <div class="ms-card-footer text-right">
+                    <a routerLink="/">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

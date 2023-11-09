@@ -1,0 +1,700 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <!-- Infographics Widgets -->
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 3.2%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span>Upsells Graph</span>
+                        <h2>8,451</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="sellGraph" [labels]="infographicsLabels" [options]="infographicsOptions"
+                    [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-danger"><i class="material-icons">arrow_downward</i> 4.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span>Conversions</span>
+                        <h2>$3,973</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="totalVisitors" [labels]="infographicsLabels2"
+                    [options]="infographicsOptions" [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 12.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span>Affiliate Graph</span>
+                        <h2>7,333</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="newUsers" [labels]="infographicsLabels3" [options]="infographicsOptions"
+                    [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-success"><i class="material-icons">arrow_upward</i> 9.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span>Visitor Graph</span>
+                        <h2>48,973</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="totalOrders" [labels]="infographicsLabels3"
+                    [options]="infographicsOptions" [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <!-- Icon cards Widget -->
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card card-gradient-success ms-widget ms-infographics-widget">
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <h6>Total Subscriptions</h6>
+                        <p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 4567</p>
+                        <p class="fs-12">48% From Last 24 Hours</p>
+                    </div>
+                </div>
+                <i class="flaticon-statistics"></i>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card card-gradient-secondary ms-widget ms-infographics-widget">
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <h6>Budgets</h6>
+                        <p class="ms-card-change"> $80,950</p>
+                        <p class="fs-12">2% Decreased from last budget</p>
+                    </div>
+                </div>
+                <i class="flaticon-stats"></i>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card card-gradient-success ms-widget ms-infographics-widget">
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <h6>Total Users</h6>
+                        <p class="ms-card-change"> <i class="material-icons">arrow_upward</i> 4567</p>
+                        <p class="fs-12">48% From Last 24 Hours</p>
+                    </div>
+                </div>
+                <i class="flaticon-user"></i>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="ms-card card-gradient-secondary ms-widget ms-infographics-widget">
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <h6>Conversions</h6>
+                        <p class="ms-card-change"> $80,950</p>
+                        <p class="fs-12">2% Decreased from last budget</p>
+                    </div>
+                </div>
+                <i class="flaticon-reuse"></i>
+            </div>
+        </div>
+        <!-- Notifications Widgets -->
+        <div class="col-xl-3 col-md-6" *ngFor="let item of notifications">
+            <a routerLink="/">
+                <div class="ms-panel ms-widget ms-panel-hoverable has-border ms-has-new-msg ms-notification-widget">
+                    <span class="msg-count">{{item.notification}}</span>
+                    <div class="ms-panel-body media">
+                        <i class="material-icons">{{item.icon}}</i>
+                        <div class="media-body">
+                            <h6>{{item.title}}</h6>
+                            <span>{{item.text}}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- User Activity By Country Widget -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-widget">
+                <div class="ms-panel-header">
+                    <h6>Top User Activity By Country</h6>
+                    <p>Users activity performance and bounce rate based on country</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-light mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Country</th>
+                                    <th scope="col">Entrances</th>
+                                    <th scope="col">Bounce Rate</th>
+                                    <th scope="col">Exits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of userActivity">
+                                    <th scope="row"> <img [src]="item.countryflag" alt="flags"></th>
+                                    <td>{{item.entrance | number:'1.2-2'}}</td>
+                                    <td>{{item.bouncerate | number:'1.2-2'}}%</td>
+                                    <td>{{item.exits | number:'1.2-2'}}%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trade History Widget -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-widget ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Sales History</h6>
+                    <p>View your sales history</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-light mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Revenue ($)</th>
+                                    <th scope="col">Products</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of salesHistory">
+                                    <td>${{item.price | number:'1.2-2'}}</td>
+                                    <td>{{item.title}}</td>
+                                    <td>{{item.date}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Widget -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh ms-widget ms-chat-conversations">
+                <div class="ms-panel-header">
+                    <div class="ms-chat-header justify-content-between">
+                        <div class="ms-chat-user-container media clearfix">
+                            <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                                <img src="assets/img/costic/customer-7.jpg" class="ms-img-round" alt="people">
+                            </div>
+                            <div class="media-body ms-chat-user-info mt-1">
+                                <h6>Heather Brown</h6>
+                                <span class="text-disabled fs-12">
+                                    Active Now
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="ms-list ms-list-flex ms-chat-controls">
+                            <li placement="top" ngbTooltip="Call"> <i class="material-icons">local_phone</i> </li>
+                            <li placement="top" ngbTooltip="Video Call"> <i class="material-icons">videocam</i> </li>
+                            <li placement="top" ngbTooltip="Add to Chat"> <i class="material-icons">person_add</i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <perfect-scrollbar class="ms-panel-body ms-scrollable">
+                    <div class="{{item.userId === currentUserId ? 'ms-chat-bubble ms-chat-message media clearfix ms-chat-outgoing' : 'ms-chat-bubble ms-chat-message media clearfix ms-chat-incoming'}}"
+                        *ngFor="let item of chats; let i = index;">
+                        <div [innerHtml]="getChatInitialMsg(item, i)"></div>
+                        <div class="media-body">
+                            <div class="ms-chat-text">
+                                <p> {{item.message}}</p>
+                            </div>
+                            <div [innerHtml]="getChatInitialTime(item, i)"></div>
+
+                        </div>
+                    </div>
+                    <div class="ms-panel-footer">
+                        <div class="ms-chat-textbox">
+                            <ul class="ms-list-flex mb-0">
+                                <li class="ms-chat-vn"><i class="material-icons">mic</i> </li>
+                                <li class="ms-chat-input">
+                                    <input type="text" name="msg" placeholder="Enter Message" value="">
+                                </li>
+                                <li class="ms-chat-text-controls ms-list-flex">
+                                    <span> <i class="material-icons">tag_faces</i> </span>
+                                    <span> <i class="material-icons">attach_file</i> </span>
+                                    <span> <i class="material-icons">camera_alt</i> </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </perfect-scrollbar>
+            </div>
+        </div>
+        <!-- Todo Widget -->
+        <div class="col-xl-6 col-md-12 ms-deletable ms-todo-list">
+            <div class="ms-card ms-widget ms-card-fh">
+                <div class="ms-card-header clearfix">
+                    <h6 class="ms-card-title">Menu Lists</h6>
+                    <button placement="left" ngbTooltip="Add a Task to this block"
+                        class="ms-add-task-to-block ms-btn-icon float-right" (click)="open(taskModal)"> <i
+                            class="material-icons text-disabled">add</i> </button>
+                </div>
+                <div class="ms-card-body">
+                    <ul class="ms-list ms-task-block">
+                        <li class="ms-list-item ms-to-do-task ms-deletable" *ngFor="let task of tasks; let i = index;"
+                            [ngClass]="task.state == true ? 'task-complete' : ''">
+                            <label class="ms-checkbox-wrap ms-todo-complete">
+                                <input type="checkbox" value="" (click)="taskComplete(task)">
+                                <i class="ms-checkbox-check"></i>
+                            </label>
+                            <span> {{task.name}} </span>
+                            <button type="button" class="close">
+                                <i class="flaticon-trash ms-delete-trigger" (click)="removeTask(i)"> </i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ms-card-footer clearfix">
+                    <a routerLink="/" class="text-disabled mr-2"> <i class="flaticon-archive"> </i> Archive </a>
+                    <a routerLink="/" class="text-disabled ms-delete-trigger float-right"> <i class="flaticon-trash">
+                        </i> Delete </a>
+                </div>
+            </div>
+        </div>
+        <!-- Email Widget -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh ms-widget ms-email-widget">
+                <div class="ms-panel-header">
+                    <div class="media clearfix">
+                        <div class="mr-3 align-self-center">
+                            <img src="assets/img/costic/customer-7.jpg" class="ms-img-small ms-img-round" alt="people">
+                        </div>
+                        <div class="media-body">
+                            <h6>Heather Brown</h6>
+                        </div>
+                        <ul class="ms-email-options">
+                            <li><a routerLink="/" class="text-disabled"> <i class="material-icons">local_offer</i> Tags
+                                </a></li>
+                            <li><a routerLink="/" class="text-disabled"> <i class="material-icons">folder</i> Folders
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ms-panel-body">
+                    <form method="post" class="clearfix">
+                        <div class="form-group mb-4">
+                            <input type="text" class="form-control" placeholder="Recipients">
+                            <div class="ms-cc">
+                                <i class="material-icons">person</i> CC & BCC
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="email" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group mb-2">
+                            <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn btn-primary float-right" type="submit">Send Mail</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Food Widget -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-widget ms-crypto-widget">
+                <div class="ms-panel-header">
+                    <h6>Favourite charts</h6>
+                    <p>Food and iterm which are Favourite by the user</p>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <ul ngbNav #favTablenav="ngbNav" class="nav nav-tabs nav-justified has-gap px-4 pt-4"
+                        role="tablist">
+                        <li [ngbNavItem]="1" class="fs-12">
+                            <a ngbNavLink> Mon </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2" class="fs-12">
+                            <a ngbNavLink> Tue </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3" class="fs-12">
+                            <a ngbNavLink> Wed </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="4" class="fs-12">
+                            <a ngbNavLink> Thu </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="5" class="fs-12">
+                            <a ngbNavLink> Fri </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="favTablenav"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Chat Widget (Active Chats) -->
+        <div class="col-xl-4 col-md-12">
+            <div class="ms-panel ms-widget">
+                <div class="ms-panel-body py-3 px-0">
+                    <div class="ms-chat-container">
+                        <div class="ms-chat-header px-3">
+                            <div class="ms-chat-user-container media clearfix">
+                                <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                                    <img src="assets/img/costic/customer-10.jpg" class="ms-img-round" alt="people">
+                                </div>
+                                <div class="media-body ms-chat-user-info mt-1">
+                                    <h6>Anny Farisha</h6>
+                                    <div ngbDropdown>
+                                        <a href="javascript:void(0)" class="text-disabled has-chevron fs-12 "
+                                            ngbDropdownToggle>
+                                            Available
+                                        </a>
+                                        <ul ngbDropdownMenu class="dropdown-menu">
+                                            <li class="ms-dropdown-list">
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Busy</span>
+                                                    </div>
+                                                </a>
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Away</span>
+                                                    </div>
+                                                </a>
+                                                <a class="media p-2" routerLink="/">
+                                                    <div class="media-body">
+                                                        <span>Offline</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ms-form my-3" method="post">
+                                <div class="ms-form-group my-0 mb-0 has-icon fs-14">
+                                    <input type="search" class="ms-form-input w-100" name="search"
+                                        placeholder="Search for People and Groups">
+                                    <i class="flaticon-search text-disabled"></i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="ms-chat-body">
+                            <ul class="nav nav-tabs tabs-bordered d-flex nav-justified px-3" ngbNav #nav="ngbNav">
+                                <li [ngbNavItem]="1" class="fs-12">
+                                    <a ngbNavLink> Chats </a>
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                <li class="ms-chat-user-container ms-open-chat ms-deletable p-3 media clearfix"
+                                    *ngFor="let item of chatspost | slice:0:5">
+                                    <div class="ms-chat-status ms-status-away ms-has-new-msg ms-chat-img mr-3 align-self-center"
+                                        *ngIf="item.newmsg">
+                                        <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center"
+                                        *ngIf="item.online">
+                                        <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="ms-chat-status ms-status-offline ms-chat-img mr-3 align-self-center"
+                                        *ngIf="item.offline">
+                                        <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="ms-chat-status ms-status-busy ms-chat-img mr-3 align-self-center"
+                                        *ngIf="item.busy">
+                                        <span class="msg-count" *ngIf="item.msgcount">{{item.msgcount}}</span>
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="media-body ms-chat-user-info mt-1">
+                                        <h6>{{item.name}}</h6> <span class="ms-chat-time">{{item.time}}</span>
+                                        <p>{{item.text}}</p>
+                                        <i class="flaticon-trash ms-delete-trigger" (click)="removeItem(item)"> </i>
+                                    </div>
+                                </li>
+                                </perfect-scrollbar>
+                                </ng-template>
+                                </li>
+                                <li [ngbNavItem]="2" class="fs-12">
+                                    <a ngbNavLink> Groups </a>
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                <li class="ms-chat-user-container ms-open-chat p-3 media clearfix"
+                                    *ngFor="let item of groupspost | slice:0:3">
+                                    <div class="ms-chat-img mr-3 align-self-center">
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="media-body ms-chat-user-info mt-1">
+                                        <h6>{{item.name}}</h6> <a routerLink="/" class="ms-chat-time"> <i
+                                                class="flaticon-chat"></i> </a>
+                                        <p>{{item.text}}</p>
+                                        <ul class="ms-group-members clearfix mt-3 mb-0">
+                                            <li *ngFor="let user of item.moreuser">
+                                                <img src="{{user.img}}" alt="{{item.name}}">
+                                            </li>
+                                            <li class="ms-group-count" *ngIf="item.totaluser"> {{item.totaluser}} </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                </perfect-scrollbar>
+                                </ng-template>
+                                </li>
+                                <li [ngbNavItem]="3" class="fs-12">
+                                    <a ngbNavLink> Contacts </a>
+                                    <ng-template ngbNavContent>
+                                        <perfect-scrollbar class="ms-scrollable">
+                                <li class="ms-chat-user-container ms-open-chat p-3 media clearfix"
+                                    *ngFor="let item of contactspost">
+                                    <div class="ms-chat-img mr-3 align-self-center">
+                                        <img src="{{item.img}}" class="ms-img-round" alt="{{item.name}}">
+                                    </div>
+                                    <div class="media-body ms-chat-user-info mt-1">
+                                        <h6>{{item.name}}</h6> <a routerLink="/" class="ms-chat-time"> <i
+                                                class="flaticon-chat"></i> </a>
+                                        <p>{{item.text}}</p>
+                                    </div>
+                                </li>
+                                </perfect-scrollbar>
+                                </ng-template>
+                                </li>
+                            </ul>
+                            <div [ngbNavOutlet]="nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Followers Widget -->
+        <div class="col-xl-4 col-md-12">
+            <div class="ms-panel ms-widget">
+                <div class="ms-panel-header">
+                    <h6>Followers</h6>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <perfect-scrollbar class="ms-followers ms-list ms-scrollable">
+                        <li class="ms-list-item media" *ngFor="let item of followerlist">
+                            <img src="{{item.img}}" class="ms-img-small ms-img-round" alt="{{item.name}}">
+                            <div class="media-body mt-1">
+                                <h6>{{item.name}}</h6>
+                                <span class="fs-12">{{item.post}}</span>
+                            </div>
+                            <button type="button" class="ms-btn-icon btn-success" name="button" *ngIf="item.success"><i
+                                    class="material-icons">check</i> </button>
+                            <button type="button" class="ms-btn-icon btn-primary" name="button" *ngIf="item.primary"><i
+                                    class="material-icons">person_add</i> </button>
+                        </li>
+                    </perfect-scrollbar>
+                </div>
+            </div>
+        </div>
+        <!-- User Profile Widget -->
+        <div class="col-xl-4 col-md-12">
+            <div class="ms-card ms-widget ms-profile-widget">
+                <div class="ms-card-img">
+                    <img src="assets/img/costic/banner-1000x370.jpg" alt="card_img">
+                </div>
+                <img src="assets/img/costic/customer-10.jpg" class="ms-img-large ms-img-round ms-user-img" alt="people">
+                <div class="ms-card-body">
+                    <h2>Anny Farisha</h2>
+                    <span>Quality Control Manager</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                    <button type="button" class="btn btn-gradient-primary" name="button"><i
+                            class="material-icons">person_add</i> Follow</button>
+                    <ul class="ms-profile-stats">
+                        <li>
+                            <h3 class="ms-count">5790</h3>
+                            <span>Followers</span>
+                        </li>
+                        <li>
+                            <h3 class="ms-count">4.8</h3>
+                            <span>User Rating</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Identifiers -->
+        <div class="col-md-4">
+            <div class="ms-panel ms-widget ms-identifier-widget bg-danger">
+                <div class="ms-panel-header header-mini">
+                    <h6>Danger</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="text-center">
+                        <i class="flaticon-alert-1"></i>
+                        <p>Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy euismod tinciduntut
+                            laoreet doloremagna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="ms-panel ms-widget ms-identifier-widget bg-warning">
+                <div class="ms-panel-header header-mini">
+                    <h6>Warning</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="text-center">
+                        <i class="flaticon-alert"></i>
+                        <p>Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy euismod tinciduntut
+                            laoreet doloremagna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="ms-panel ms-widget ms-identifier-widget bg-info">
+                <div class="ms-panel-header header-mini">
+                    <h6>Info</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="text-center">
+                        <i class="flaticon-information"></i>
+                        <p>Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy euismod tinciduntut
+                            laoreet doloremagna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- taskModal -->
+<ng-template #taskModal let-modal>
+    <div class="modal-header bg-secondary">
+        <h5 class="modal-title has-icon text-white"> New Task</h5>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+            <span>×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="ms-form-group">
+            <label>Task Title</label>
+            <input type="text" class="form-control" [(ngModel)]="taks" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-secondary shadow-none"
+            (click)="onClickTask(); modal.dismiss('Cross click')">Add Task</button>
+    </div>
+</ng-template>

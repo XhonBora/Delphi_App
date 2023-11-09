@@ -1,0 +1,65 @@
+<div class="ms-quickbar-container ms-reminders">
+    <ul class="ms-qa-options">
+        <li> <a href="javascript:void(0)" (click)="open(reminderModal)"> <i class="flaticon-bell"></i> New Reminder </a> </li>
+    </ul> 
+    <perfect-scrollbar class="ms-quickbar-container ms-scrollable">
+        <div class="ms-card ms-qa-card ms-deletable" *ngFor="let item of reminders">
+            <div class="ms-card-body">
+                <p> {{item.title}} </p>
+                <span class="text-disabled fs-12">
+                    <i class="material-icons fs-14">access_time</i> 
+                    {{item.date}} - {{item.time}}
+                </span>
+            </div>
+            <div class="ms-card-footer clearfix">
+                <div class="ms-note-editor float-right">
+                    <a routerLink="/" class="text-disabled mr-2"> <i class="flaticon-pencil"> </i> Edit </a>
+                    <a href="javascript:void(0)" class="text-disabled  ms-delete-trigger" (click)="removeItem(item)"> <i class="flaticon-trash"> </i> Delete </a>
+                </div> 
+            </div>
+        </div>
+    </perfect-scrollbar>
+</div>
+<ng-template #reminderModal let-modal>
+    <div class="modal-header bg-secondary">
+        <h5 class="modal-title has-icon text-white"> New Reminder</h5>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+            <span>×</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="ms-form-group">
+            <label>Remind me about</label>
+            <textarea class="form-control" placeholder="Remind me about" [(ngModel)]="reminderTitle"></textarea>
+        </div>
+        <div class="ms-form-group">
+            <span class="ms-option-name fs-14">Repeat Daily</span>
+            <label class="ms-switch float-right">
+                <input type="checkbox">
+                <span class="ms-switch-slider round"></span>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ms-form-group">
+                    <input type="date" class="form-control datepicker" name="reminder-date" [(ngModel)]="reminderDate" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ms-form-group">
+                    <select class="form-control" name="reminder-time" [(ngModel)]="reminderTime">
+                        <option value="12:00 pm">12:00 pm</option>
+                        <option value="1:00 pm">1:00 pm</option>
+                        <option value="2:00 pm">2:00 pm</option>
+                        <option value="3:00 pm">3:00 pm</option>
+                        <option value="4:00 pm">4:00 pm</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-secondary shadow-none" (click)="onClick(); modal.dismiss('Cross click')">Add Reminder</button>
+    </div>
+</ng-template>

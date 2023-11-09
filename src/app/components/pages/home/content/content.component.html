@@ -1,0 +1,568 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="db-header-title">Welcome, Anny</h1>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-black"><i class="material-icons">arrow_upward</i> 3.2%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span class="black-text"><strong>Sells Graph</strong></span>
+                        <h2>$8,451</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="sellGraph" [labels]="infographicsLabels" [options]="infographicsOptions"
+                    [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-red"><i class="material-icons">arrow_downward</i> 4.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span class="black-text"><strong>Total Visitors</strong></span>
+                        <h2>3,973</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="totalVisitors" [labels]="infographicsLabels2"
+                    [options]="infographicsOptions" [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-black"><i class="material-icons">arrow_upward</i> 12.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span class="black-text"><strong>New Users</strong></span>
+                        <h2>7,333</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="newUsers" [labels]="infographicsLabels3" [options]="infographicsOptions"
+                    [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="ms-card ms-widget has-graph-full-width ms-infographics-widget">
+                <span class="ms-chart-label bg-red"><i class="material-icons">arrow_upward</i> 9.5%</span>
+                <div class="ms-card-body media">
+                    <div class="media-body">
+                        <span class="black-text"><strong>Total Orders</strong></span>
+                        <h2>48,973</h2>
+                    </div>
+                </div>
+                <canvas baseChart [datasets]="totalOrders" [labels]="infographicsLabels3"
+                    [options]="infographicsOptions" [chartType]="LineChartType">
+                </canvas>
+            </div>
+        </div>
+        <!-- Recent Orders Requested -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="align-self-center align-left">
+                            <h6>Recent Orders Requested</h6>
+                        </div>
+                        <button type="button" class="btn btn-primary">View All</button>
+                    </div>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Food Item</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Product ID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of recentOrders">
+                                    <td class="ms-table-f-w">
+                                        <img [src]="item.img" [alt]="item.title"> {{item.title}}
+                                    </td>
+                                    <td>${{item.price | number:'1.2-2'}}</td>
+                                    <td>{{item.id}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header new">
+                    <h6>Monthly Revenue</h6>
+                    <select class="form-control new" id="exampleSelect">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March </option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <div class="ms-panel-body">
+                    <div *ngFor="let item of monthlyRevenue">
+                        <span class="progress-label"> <strong>{{item.title}}</strong> </span>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" [style.width.%]="item.value">{{item.value}}%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Food Orders -->
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Trending Orders</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6" *ngFor="let item of trendingOrders">
+                            <div class="ms-card no-margin">
+                                <div class="ms-card-img">
+                                    <img [src]="item.img" [alt]="item.title">
+                                </div>
+                                <div class="ms-card-body">
+                                    <div class="ms-card-heading-title">
+                                        <h6>{{item.title}}</h6>
+                                        <span class="green-text"><strong>${{item.price |
+                                                number:'1.2-2'}}</strong></span>
+                                    </div>
+                                    <div class="ms-card-heading-title">
+                                        <p>Orders <span class="red-text">{{item.orders | number:'1.0-0'}}</span></p>
+                                        <p>Income <span class="red-text">${{item.price * item.orders |
+                                                number:'1.0-0'}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END/Food Orders -->
+        <!-- Recent Orders Requested -->
+        <div class="col-xl-7 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="ms-header-text">
+                            <h6>Order Timing Chart</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="ms-panel-body pt-0">
+                    <div class="d-flex justify-content-between ms-graph-meta">
+                        <ul class="ms-list-flex mt-3 mb-5">
+                            <li>
+                                <span>Total Orders</span>
+                                <h3 class="ms-count">703,49</h3>
+                            </li>
+                            <li>
+                                <span>New Orders</span>
+                                <h3 class="ms-count">95,038</h3>
+                            </li>
+                            <li>
+                                <span>Repeat Orders</span>
+                                <h3 class="ms-count">28,387</h3>
+                            </li>
+                            <li>
+                                <span>Cancel Orders</span>
+                                <h3 class="ms-count">260</h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <canvas baseChart [datasets]="orderGraph" [labels]="orderLabels" [options]="orderOptions"
+                        [chartType]="BarChart">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Favourite Products -->
+        <div class="col-xl-5 col-md-12">
+            <div class="ms-panel ms-widget ms-crypto-widget">
+                <div class="ms-panel-header">
+                    <h6>Favourite charts</h6>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <ul ngbNav #favTablenav="ngbNav" class="nav nav-tabs nav-justified has-gap px-4 pt-4"
+                        role="tablist">
+                        <li [ngbNavItem]="1" class="fs-12">
+                            <a ngbNavLink> Mon </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2" class="fs-12">
+                            <a ngbNavLink> Tue </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3" class="fs-12">
+                            <a ngbNavLink> Wed </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="4" class="fs-12">
+                            <a ngbNavLink> Thu </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="5" class="fs-12">
+                            <a ngbNavLink> Fri </a>
+                            <ng-template ngbNavContent>
+                                <div class="table-responsive">
+                                    <table class="table table-hover thead-light">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Restaurant Names</th>
+                                                <th scope="col">Qty</th>
+                                                <th scope="col">Orders</th>
+                                                <th scope="col">Profit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of favouriteTable">
+                                                <td>{{item.name}}</td>
+                                                <td>{{item.qty | number:'1.0-0'}}</td>
+                                                <td class="ms-text-success" *ngIf="item.profit">+{{item.orders}}%</td>
+                                                <td class="ms-text-danger" *ngIf="!item.profit">-{{item.orders}}%</td>
+                                                <td>{{item.profits}}%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="favTablenav"></div>
+                </div>
+            </div>
+            <!-- Favourite Products -->
+            <!-- Total Earnings -->
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Total Earnings</h6>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <div class="ms-quick-stats">
+                        <div class="ms-stats-grid">
+                            <i class="fa fa-star"></i>
+                            <p class="ms-text-dark">$8,033</p>
+                            <span>Today</span>
+                        </div>
+                        <div class="ms-stats-grid">
+                            <i class="fa fa-university"></i>
+                            <p class="ms-text-dark">$3,039</p>
+                            <span>Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Total Earnings -->
+        <!-- Recent Placed Orders< -->
+        <div class="col-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Recently Placed Orders</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover thead-primary mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Order ID</th>
+                                    <th scope="col">Order Name</th>
+                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Order Status</th>
+                                    <th scope="col">Delivered Time</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of recentlyOrders">
+                                    <th scope="row">{{item.id}}</th>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.customername}}</td>
+                                    <td>{{item.location}}</td>
+                                    <td>
+                                        <span class="badge badge-success" *ngIf="item.status === 'Delivered'">{{item.status}}</span>
+                                        <span class="badge badge-primary" *ngIf="item.status === 'Pending'">{{item.status}}</span>
+                                        <span class="badge badge-dark" *ngIf="item.status === 'Cancelled'">{{item.status}}</span>
+                                    </td>
+                                    <td>{{item.deliverytime}}</td>
+                                    <td>${{item.price | number:'1.2-2'}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Orders< -->
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>New Resturant Listings</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of newListings">
+                            <div class="ms-card no-margin">
+                                <div class="ms-card-body">
+                                    <div class="media fs-14">
+                                        <div class="mr-2 align-self-center">
+                                            <img [src]="item.img" class="ms-img-round" [alt]="item.title">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>{{item.title}} </h6>
+                                            <div ngbDropdown class="dropdown float-right">
+                                                <a href="javascript:void(0)" class="toggle-icon-none" ngbDropdownToggle>
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                                                    <li class="ms-dropdown-list">
+                                                        <a class="media p-2" routerLink="/">
+                                                            <div class="media-body">
+                                                                <span>Sales</span>
+                                                            </div>
+                                                        </a>
+                                                        <a class="media p-2" routerLink="/">
+                                                            <div class="media-body">
+                                                                <span>Details</span>
+                                                            </div>
+                                                        </a>
+                                                        <a class="media p-2" routerLink="/">
+                                                            <div class="media-body">
+                                                                <span>Remove</span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="fs-12 my-1 text-disabled">{{item.addbeforetime}}</p>
+                                        </div>
+                                    </div>
+                                    <ngb-rating [max]="5" [(rate)]="item.rating" class="ms-star-rating rating-fill rating-circle ratings-new" [readonly]="true">
+                                        <ng-template let-fill="fill" let-index="index">
+                                            <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                                    class="material-icons">star</i> </li>
+                                        </ng-template>
+                                    </ngb-rating>
+                                    <p>{{item.shortdesc}}</p>
+                                </div>
+                                <div class="ms-card-img">
+                                    <img [src]="item.productBanner" [alt]="item.title">
+                                </div>
+                                <div class="ms-card-footer text-disabled d-flex">
+                                    <div class="ms-card-options">
+                                        <i class="material-icons">favorite</i> {{item.likes | number:'1.0-0'}}
+                                    </div>
+                                    <div class="ms-card-options">
+                                        <i class="material-icons">comment</i> {{item.comment | number:'1.0-0'}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Support Tickets -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="align-self-center align-left">
+                            <h6>Recent Support Tickets</h6>
+                        </div>
+                        <a href="#" class="btn btn-primary"> View All</a>
+                    </div>
+                </div>
+                <div class="ms-panel-body p-0">
+                    <ul class="ms-list ms-feed ms-twitter-feed ms-recent-support-tickets">
+                        <li class="ms-list-item" *ngFor="let item of supportTickets">
+                            <a routerLink="/" class="media clearfix">
+                                <img src="{{item.userimg}}" class="ms-img-round ms-img-small" alt="{{item.username}}">
+                                <div class="media-body">
+                                    <div class="d-flex justify-content-between">
+                                        <h4 class="ms-feed-user mb-0">{{item.username}}</h4>
+                                        <span class="badge badge-success" *ngIf="item.open"> Open </span>
+                                        <span class="badge badge-danger" *ngIf="item.close"> Closed </span>
+                                    </div>
+                                    <span class="my-2 d-block"> <i class="material-icons">date_range</i>
+                                        {{item.date}}</span>
+                                    <p class="d-block"> {{item.query}}</p>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <div class="ms-feed-controls">
+                                            <span>
+                                                <i class="material-icons">chat</i> {{item.comment}}
+                                            </span>
+                                            <span>
+                                                <i class="material-icons">attachment</i> {{item.attachment}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Support Tickets -->
+        <!-- client chat -->
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh ms-widget ms-chat-conversations">
+                <div class="ms-panel-header">
+                    <div class="ms-chat-header justify-content-between">
+                        <div class="ms-chat-user-container media clearfix">
+                            <div class="ms-chat-status ms-status-online ms-chat-img mr-3 align-self-center">
+                                <img src="assets/img/costic/customer-1.jpg" class="ms-img-round" alt="people">
+                            </div>
+                            <div class="media-body ms-chat-user-info mt-1">
+                                <h6>Heather Brown</h6>
+                                <span class="text-disabled fs-12">
+                                    Active Now
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="ms-list ms-list-flex ms-chat-controls">
+                            <li placement="top" ngbTooltip="Call"> <i class="material-icons">local_phone</i> </li>
+                            <li placement="top" ngbTooltip="Video Call"> <i class="material-icons">videocam</i> </li>
+                            <li placement="top" ngbTooltip="Add to Chat"> <i class="material-icons">person_add</i> </li>
+                        </ul>
+                    </div>
+                </div>
+                <perfect-scrollbar class="ms-panel-body ms-scrollable">
+                    <div class="{{item.userId === currentUserId ? 'ms-chat-bubble ms-chat-message media clearfix ms-chat-outgoing' : 'ms-chat-bubble ms-chat-message media clearfix ms-chat-incoming'}}"
+                        *ngFor="let item of chats; let i = index;">
+                        <div [innerHtml]="getChatInitialMsg(item, i)"></div>
+                        <div class="media-body">
+                            <div class="ms-chat-text">
+                                <p> {{item.message}}</p>
+                            </div>
+                            <div [innerHtml]="getChatInitialTime(item, i)"></div>
+
+                        </div>
+                    </div>
+                    <div class="ms-panel-footer">
+                        <div class="ms-chat-textbox">
+                            <ul class="ms-list-flex mb-0">
+                                <li class="ms-chat-vn"><i class="material-icons">mic</i> </li>
+                                <li class="ms-chat-input">
+                                    <input type="text" name="msg" placeholder="Enter Message" value="">
+                                </li>
+                                <li class="ms-chat-text-controls ms-list-flex">
+                                    <span> <i class="material-icons">tag_faces</i> </span>
+                                    <span> <i class="material-icons">attach_file</i> </span>
+                                    <span> <i class="material-icons">camera_alt</i> </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </perfect-scrollbar> 
+            </div>
+        </div>
+        <!-- client chat -->
+    </div>
+</div>

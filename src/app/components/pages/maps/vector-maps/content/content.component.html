@@ -1,0 +1,59 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>World Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <highcharts-chart class="vector-map" [Highcharts]="worldMap"
+                        [constructorType]="worldMapchartConstructor" [options]="worldMapchartOptions"
+                        style="width: 100%; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>USA Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <highcharts-chart class="vector-map" [Highcharts]="UsaMap"
+                        [constructorType]="usaMapchartConstructor" [options]="usaMapchartOptions"
+                        style="width: 100%; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>World Map Only Continents</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <highcharts-chart class="vector-map" [Highcharts]="ContinentsMap"
+                        [constructorType]="continentsMapchartConstructor" [options]="continentsMapchartOptions"
+                        style="width: 100%; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>India Map</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <highcharts-chart class="vector-map" [Highcharts]="IndiaMap"
+                        [constructorType]="indiamapchartConstructor" [options]="indiamapchartOptions"
+                        style="width: 100%; display: block;">
+                    </highcharts-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

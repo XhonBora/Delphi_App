@@ -1,0 +1,35 @@
+<div class="ms-content-wrapper menu-grid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6" *ngFor="let item of product | paginate: { itemsPerPage: 8, currentPage: page }">
+                    <div class="ms-card">
+                        <div class="ms-card-img">
+                            <img [src]="item.img[0]" [alt]="item.name">
+                        </div>
+                        <div class="ms-card-body">
+                            <div class="new">
+                                <h6 class="mb-0">{{item.name}} </h6>
+                                <h6 class="ms-text-primary mb-0">${{item.price | number:'1.2-2'}}</h6>
+                            </div>
+                            <div class="new meta">
+                                <p>Qty:{{item.qty | number:'1.0-0'}} </p>
+                                <span class="badge badge-primary" *ngIf="item.status === 'Out Of Stock'">Out of Stock</span>
+                                <span class="badge badge-success" *ngIf="item.status === 'In Stock'">In Stock</span>
+                            </div>
+                            <p>{{item.shortdesc}}</p>
+                            <div class="new mb-0">
+                                <button type="button" class="btn grid-btn mt-0 btn-sm btn-primary">Remove</button>
+                                <a routerLink="/product/product-detail/{{item.id}}" class="btn grid-btn mt-0 btn-sm btn-secondary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination justify-content-center">
+                <pagination-controls (pageChange)="page = $event"></pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

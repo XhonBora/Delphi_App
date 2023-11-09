@@ -1,0 +1,124 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <!-- Active Orders Graph -->
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="ms-panel ms-panel-fh">
+                        <div class="ms-panel-header">
+                            <h6>Restaurant wise sales</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <div class="row">
+                                <div class="col-xl-4 col-md-4">
+                                    <div class="ms-graph-labels column-direction">
+                                        <div class="ms-chart-no-label">
+                                            <span class="bg-success"></span>
+                                            <p>$9,348,319</p>
+                                        </div>
+                                        <div class="ms-chart-no-label">
+                                            <span class="bg-primary"></span>
+                                            <p>$4,344,316</p>
+                                        </div>
+                                        <div class="ms-chart-no-label">
+                                            <span class="bg-warning"></span>
+                                            <p>$518,513</p>
+                                        </div>
+                                        <div class="ms-chart-no-label">
+                                            <span class="bg-danger"></span>
+                                            <p>$348,319</p>
+                                        </div>
+                                        <div class="ms-chart-no-label">
+                                            <span class="bg-secondary"></span>
+                                            <p>$3,416,139</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-8">
+                                    <canvas baseChart [datasets]="salesData" [labels]="salesLabels"
+                                        [options]="salesOptions" [chartType]="salesType">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="ms-panel">
+                        <div class="ms-panel-header new">
+                            <h6>Top Food Menu</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Food Item</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Product ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of topMenu">
+                                            <td class="ms-table-f-w">
+                                                <img [src]="item.img" [alt]="item.title"> {{item.title}}
+                                            </td>
+                                            <td>${{item.price | number:'1.2-2'}}</td>
+                                            <td>{{item.id}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="ms-panel">
+                        <div class="ms-panel-header">
+                            <h6>Invoice List</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover thead-primary mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Restaurant ID</th>
+                                            <th scope="col">Restaurant Name</th>
+                                            <th scope="col">Location</th>
+                                            <th scope="col">Ratings</th>
+                                            <th scope="col">Joining Date</th>
+                                            <th scope="col">Restaurant Sale(%)</th>
+                                            <th scope="col">Send / Edit / Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of tableList">
+                                            <th scope="row">{{item.id}}</th>
+                                            <td>{{item.name}}</td>
+                                            <td>{{item.location}}</td>
+                                            <td>
+                                                <ngb-rating [max]="5" [(rate)]="item.rating" class="ms-star-rating rating-fill rating-circle ratings-new" [readonly]="true">
+                                                    <ng-template let-fill="fill" let-index="index">
+                                                        <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                                                class="material-icons">star</i> </li>
+                                                    </ng-template>
+                                                </ngb-rating>
+                                            </td>
+                                            <td>{{item.joiningdate}}</td>
+                                            <td>{{item.sale}}</td>
+                                            <td><a routerLink="/"><i class='fas fa-paper-plane text-secondary text-success'></i></a>
+                                                <a routerLink="/"><i class='fas fa-pencil-alt text-secondary'></i></a>
+                                                <a routerLink="/"><i class='far fa-trash-alt ms-text-danger'></i></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

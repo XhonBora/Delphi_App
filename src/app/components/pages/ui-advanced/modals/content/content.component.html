@@ -1,0 +1,547 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Modals Style 1</h6>
+                </div>
+                <div class="ms-panel-body"> 
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Important Notice</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalone)"> Click Me </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">User Concent</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modaltwo)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Opt-in Form</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalthree)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Terms and Agreements</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalfour)"> Click Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Modals Style 2</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Important Notice</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalfive)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">User Concent</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalsix)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Opt-in Form</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modalseven)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Terms and Agreements</h6>
+                            <button class="btn btn-primary mt-0" (click)="open(modaleight)"> Click Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Modals Style 3</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Congragulations message</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmin(modalnine)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Opt-in Form</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmin(modalten)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Account Login</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmin(modaleleven)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Forgot Password</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmin(modaltwelve)"> Click Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Modals Style 3</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">User Concent</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmax(modalthirteen)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Opt-in Form</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmax(modalfourteen)"> Click Me
+                            </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Reminder</h6>
+                            <button class="btn btn-primary mt-0" (click)="openmax(modalfifteen)"> Click Me
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #modalone let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-alert-1 bg-primary text-white"></i>
+            Important Notice!</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>Lorem ipsum is simply Dummy text of the printing and typing industry. Lorem ipsum has
+            been the industry's standard for dummy text.</p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <label class="ms-checkbox-wrap">
+                <input type="checkbox" value="">
+                <i class="ms-checkbox-check"></i>
+            </label>
+            <span> Don't Show me Again </span>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-primary shadow-none">Accept</button>
+    </div>
+</ng-template>
+<ng-template #modaltwo let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-placeholder bg-primary text-white"></i>
+            Allow Location
+            Tracking?</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>Lorem ipsum is simply Dummy text of the printing and typing industry. Lorem
+            ipsum has been the industry's standard for dummy text.</p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <a routerLink="/" class="btn-link"> Learn More </a>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Don't
+            Allow</button>
+        <button type="button" class="btn btn-primary shadow-none">Allow</button>
+    </div>
+</ng-template>
+<ng-template #modalthree let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-share bg-primary text-white"></i>
+            Subscribe to our
+            Newsletter</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <label>Get our latest updates</label>
+                <input type="text" placeholder="Email Address" class="form-control" name="news-letter" value="">
+                <i class="material-icons">email</i>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Cancel</button>
+        <button type="button" class="btn btn-primary shadow-none">Submit</button>
+    </div>
+</ng-template>
+<ng-template #modalfour let-modal>
+    <div class="modal-header">
+        <h3 class="modal-title has-icon ms-icon-round "><i class="flaticon-alert bg-primary text-white"></i> Terms
+            and Agreements
+        </h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ultrices
+            massa, non consectetur nunc. Nullam erat magna, aliquet sed nibh non,
+            pellentesque fermentum justo. Integer sed imperdiet sapien, vel pulvinar
+            tellus. Donec sed justo ac urna volutpat malesuada eget vestibulum libero.
+            Morbi gravida auctor diam. Nunc varius, nibh vel pharetra viverra, urna odio
+            mattis ligula, id fringilla elit ante non erat. Vivamus suscipit blandit
+            ipsum, non maximus augue hendrerit ac.
+            Maecenas et vulputate purus, consequat fermentum ante. Pellentesque ac dolor
+            enim. Nam nec pulvinar purus. Nulla ut sollicitudin arcu, non hendrerit dui.
+            Ut non massa lorem. Nunc tincidunt, tellus vel fringilla finibus,
+            ligula tellus ultrices velit, consequat maximus velit sapien sit amet nisl.
+            Morbi ac tincidunt arcu. Integer et consectetur diam, non finibus tortor.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam laoreet velit tempor malesuada finibus. Duis
+            tristique malesuada velit vitae consequat. Praesent elementum ullamcorper
+            luctus. Morbi a hendrerit tellus. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Sed pellentesque luctus
+            eros eu malesuada. Mauris sed rhoncus augue.
+            Sed blandit commodo ex eget suscipit. Maecenas elit massa, faucibus et
+            viverra eget, rutrum id dolor. Proin vel purus varius, facilisis libero
+            vitae, venenatis sapien. Integer fermentum interdum felis, et sagittis
+            lectus
+            consequat id. Curabitur accumsan arcu maximus placerat blandit. Cras
+            rhoncus, sapien id mollis accumsan, turpis libero pharetra enim, at
+            hendrerit neque libero ut massa. Ut tincidunt sapien ac lacinia aliquam.
+            Nullam
+            tincidunt erat ex, eu sagittis turpis maximus in. Donec quis porttitor odio.
+            Aliquam id neque sapien. Suspendisse ultricies nibh dictum felis viverra,
+            nec suscipit lectus blandit. Maecenas condimentum justo justo, sed mollis
+            arcu rhoncus in. Curabitur eget scelerisque diam. Etiam sit amet euismod
+            est. Integer ut massa in nulla lacinia hendrerit. Proin eu justo ut ligula
+            tempus vulputate consequat eget odio.
+            Integer lobortis libero libero, nec pulvinar libero porta non. Mauris eget
+            bibendum lectus. Maecenas et vestibulum libero, quis suscipit odio. Aenean
+            nec orci vitae nibh pellentesque venenatis vel vitae mi. Quisque dapibus
+            risus eu massa venenatis porttitor. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed porttitor interdum purus et varius. Praesent lobortis
+            pharetra dolor ac facilisis. Sed at sem ullamcorper, efficitur diam
+            fermentum, egestas nunc. Cras commodo dictum tellus sit amet convallis.
+            Integer interdum velit sed mauris volutpat, vel tincidunt diam interdum.
+            Fusce cursus nunc in tellus convallis, sit amet tincidunt neque molestie.
+            Fusce
+            a metus augue. Nunc id urna pretium, porta turpis ut, molestie felis. Donec
+            a lorem quis ligula consectetur pulvinar. Cras a diam magna.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <label class="ms-checkbox-wrap">
+                <input type="checkbox" value="">
+                <i class="ms-checkbox-check"></i>
+            </label>
+            <span> I Agree to the Terms </span>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-primary shadow-none">Continue</button>
+    </div>
+</ng-template>
+<ng-template #modalfive let-modal>
+    <div class="modal-header bg-primary">
+        <h3 class="modal-title has-icon text-white"><i class="flaticon-alert-1"></i>
+            Important Notice!</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>Lorem ipsum is simply Dummy text of the printing and typing industry. Lorem
+            ipsum has been the industry's standard for dummy text.</p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <label class="ms-checkbox-wrap">
+                <input type="checkbox" value="">
+                <i class="ms-checkbox-check"></i>
+            </label>
+            <span> Don't Show me Again </span>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-primary shadow-none" (click)="modal.dismiss('Cross click')">Accept</button>
+    </div>
+</ng-template>
+<ng-template #modalsix let-modal>
+    <div class="modal-header bg-primary">
+        <h3 class="modal-title has-icon text-white"><i class="flaticon-placeholder"></i>
+            Allow Location Tracking?</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>Lorem ipsum is simply Dummy text of the printing and typing industry. Lorem
+            ipsum has been the industry's standard for dummy text.</p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <a routerLink="/" class="btn-link"> Learn More </a>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Don't
+            Allow</button>
+        <button type="button" class="btn btn-primary shadow-none" (click)="modal.dismiss('Cross click')">Allow</button>
+    </div>
+</ng-template>
+<ng-template #modalseven let-modal>
+    <div class="modal-header bg-primary">
+        <h3 class="modal-title has-icon text-white"><i class="flaticon-share"></i>
+            Subscribe to our Newsletter</h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <label>Get our latest updates</label>
+                <input type="text" placeholder="Email Address" class="form-control" name="news-letter" value="">
+                <i class="material-icons">email</i>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Cancel</button>
+        <button type="button" class="btn btn-primary shadow-none" (click)="modal.dismiss('Cross click')">Submit</button>
+    </div>
+</ng-template>
+<ng-template #modaleight let-modal>
+    <div class="modal-header bg-primary">
+        <h3 class="modal-title has-icon text-white"><i class="flaticon-alert"></i> Terms
+            and Agreements </h3>
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ultrices
+            massa, non consectetur nunc. Nullam erat magna, aliquet sed nibh non,
+            pellentesque fermentum justo. Integer sed imperdiet sapien, vel pulvinar
+            tellus. Donec sed justo ac urna volutpat malesuada eget vestibulum libero.
+            Morbi gravida auctor diam. Nunc varius, nibh vel pharetra viverra, urna odio
+            mattis ligula, id fringilla elit ante non erat. Vivamus suscipit blandit
+            ipsum, non maximus augue hendrerit ac.
+            Maecenas et vulputate purus, consequat fermentum ante. Pellentesque ac dolor
+            enim. Nam nec pulvinar purus. Nulla ut sollicitudin arcu, non hendrerit dui.
+            Ut non massa lorem. Nunc tincidunt, tellus vel fringilla finibus,
+            ligula tellus ultrices velit, consequat maximus velit sapien sit amet nisl.
+            Morbi ac tincidunt arcu. Integer et consectetur diam, non finibus tortor.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos. Aliquam laoreet velit tempor malesuada finibus. Duis
+            tristique malesuada velit vitae consequat. Praesent elementum ullamcorper
+            luctus. Morbi a hendrerit tellus. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Sed pellentesque luctus
+            eros eu malesuada. Mauris sed rhoncus augue.
+            Sed blandit commodo ex eget suscipit. Maecenas elit massa, faucibus et
+            viverra eget, rutrum id dolor. Proin vel purus varius, facilisis libero
+            vitae, venenatis sapien. Integer fermentum interdum felis, et sagittis
+            lectus
+            consequat id. Curabitur accumsan arcu maximus placerat blandit. Cras
+            rhoncus, sapien id mollis accumsan, turpis libero pharetra enim, at
+            hendrerit neque libero ut massa. Ut tincidunt sapien ac lacinia aliquam.
+            Nullam
+            tincidunt erat ex, eu sagittis turpis maximus in. Donec quis porttitor odio.
+            Aliquam id neque sapien. Suspendisse ultricies nibh dictum felis viverra,
+            nec suscipit lectus blandit. Maecenas condimentum justo justo, sed mollis
+            arcu rhoncus in. Curabitur eget scelerisque diam. Etiam sit amet euismod
+            est. Integer ut massa in nulla lacinia hendrerit. Proin eu justo ut ligula
+            tempus vulputate consequat eget odio.
+            Integer lobortis libero libero, nec pulvinar libero porta non. Mauris eget
+            bibendum lectus. Maecenas et vestibulum libero, quis suscipit odio. Aenean
+            nec orci vitae nibh pellentesque venenatis vel vitae mi. Quisque dapibus
+            risus eu massa venenatis porttitor. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Sed porttitor interdum purus et varius. Praesent lobortis
+            pharetra dolor ac facilisis. Sed at sem ullamcorper, efficitur diam
+            fermentum, egestas nunc. Cras commodo dictum tellus sit amet convallis.
+            Integer interdum velit sed mauris volutpat, vel tincidunt diam interdum.
+            Fusce cursus nunc in tellus convallis, sit amet tincidunt neque molestie.
+            Fusce
+            a metus augue. Nunc id urna pretium, porta turpis ut, molestie felis. Donec
+            a lorem quis ligula consectetur pulvinar. Cras a diam magna.
+        </p>
+    </div>
+    <div class="modal-footer">
+        <div class="modal-notice">
+            <label class="ms-checkbox-wrap">
+                <input type="checkbox" value="">
+                <i class="ms-checkbox-check"></i>
+            </label>
+            <span> I Agree to the Terms </span>
+        </div>
+        <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Close</button>
+        <button type="button" class="btn btn-primary shadow-none"
+            (click)="modal.dismiss('Cross click')">Continue</button>
+    </div>
+</ng-template>
+<ng-template #modalnine let-modal>
+    <div class="modal-body text-center">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <i class="flaticon-tick-inside-circle d-block"></i>
+        <h1>Congragulations!</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae ultrices
+            massa, non consectetur nunc. Nullam erat magna,
+            aliquet sed nibh non, pellentesque fermentum justo. Integer sed imperdiet
+            sapien, vel pulvinar tellus. Donec sed justo ac urna
+        </p>
+        <button type="button" class="btn btn-primary shadow-none">Get Started</button>
+    </div>
+</ng-template>
+<ng-template #modalten let-modal>
+    <div class="modal-body text-center">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <i class="flaticon-email d-block"></i>
+        <h1>Subscribe</h1>
+        <p> Subscribe and get our latest updates </p>
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <input type="text" placeholder="Email Address" class="form-control" name="news-letter" value="">
+                <i class="material-icons">email</i>
+            </div>
+            <button type="submit" class="btn btn-primary shadow-none">Get
+                Started</button>
+        </form>
+    </div>
+</ng-template>
+<ng-template #modaleleven let-modal>
+    <div class="modal-body text-center">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <i class="flaticon-user d-block"></i>
+        <h1>Login to your Account</h1>
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <input type="text" placeholder="Email Address" class="form-control" name="email" value="">
+                <i class="material-icons">email</i>
+            </div>
+            <div class="ms-form-group has-icon">
+                <input type="password" placeholder="Email Address" class="form-control" name="password" value="">
+                <i class="material-icons">security</i>
+            </div>
+            <button type="submit" class="btn btn-primary shadow-none">Login</button>
+        </form> 
+    </div>
+</ng-template>
+<ng-template #modaltwelve let-modal>
+    <div class="modal-body text-center">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <i class="flaticon-secure-shield d-block"></i>
+        <h1>Forgot Password?</h1>
+        <p> Enter your email to recover your password </p>
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <input type="text" placeholder="Email Address" class="form-control" name="forgot-password" value="">
+                <i class="material-icons">email</i>
+            </div>
+            <button type="submit" class="btn btn-primary shadow-none">Reset
+                Password</button>
+        </form>
+    </div>
+</ng-template>
+<ng-template #modalthirteen let-modal>
+    <div class="modal-body">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <h1>Are You Sure?</h1>
+        <ul class="ms-list">
+            <li class="ms-list-item media">
+                <i class="flaticon-start align-self-center"></i>
+                <div class="media-body">
+                    <p>It is a long established fact that a reader will be distracted by
+                        the content</p>
+                </div>
+            </li>
+            <li class="ms-list-item media">
+                <i class="flaticon-email align-self-center"></i>
+                <div class="media-body">
+                    <p>It is a long established fact that a reader will be distracted by
+                        the content</p>
+                </div>
+            </li>
+        </ul>
+        <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Cancel</button>
+            <button type="button" class="btn btn-primary shadow-none">Get
+                Started</button>
+        </div>
+    </div>
+</ng-template>
+<ng-template #modalfourteen let-modal>
+    <div class="modal-body">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <h1>Subscribe to our Newsletter</h1>
+        <p>It is a long established fact that a reader will be distracted by the content
+        </p>
+        <form method="post">
+            <div class="ms-form-group has-icon">
+                <input type="text" placeholder="Email Address" class="form-control" name="subscribe" value="">
+                <i class="material-icons">email</i>
+            </div>
+            <div class="modal-notice">
+                <label class="ms-checkbox-wrap">
+                    <input type="checkbox" value="">
+                    <i class="ms-checkbox-check"></i>
+                </label>
+                <span> Include Promotional Emails </span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-light" (click)="modal.dismiss('Cross click')">Cancel</button>
+                <button type="submit" class="btn btn-primary shadow-none">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</ng-template>
+<ng-template #modalfifteen let-modal>
+    <div class="modal-body">
+        <button type="button" class="close" (click)="modal.dismiss('Cross click')"><span
+                aria-hidden="true">&times;</span></button>
+        <h1>A Privacy Reminder from our site</h1>
+        <p> Leverage agile frameworks to provide a robust synopsis</p>
+        <ngb-accordion [closeOthers]="true" class="has-gap ms-accordion-chevron" activeIds="static-1">
+            <ngb-panel id="static-1">
+                <ng-template ngbPanelTitle>
+                    <span> How we manage site cookies to improve user experience.
+                    </span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    Leverage agile frameworks to provide a robust synopsis for high
+                    level overviews. Iterative approaches to corporate strategy
+                    foster collaborative thinking to further the overall value
+                    proposition.
+                    Organically grow the holistic world view of disruptive
+                    innovation via workplace diversity and empowerment.
+                </ng-template>
+            </ngb-panel>
+            <ngb-panel id="static-2">
+                <ng-template ngbPanelTitle>
+                    <span> What kind of data we process when you use our site </span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    Leverage agile frameworks to provide a robust synopsis for high
+                    level overviews. Iterative approaches to corporate strategy
+                    foster collaborative thinking to further the overall value
+                    proposition.
+                    Organically grow the holistic world view of disruptive
+                    innovation via workplace diversity and empowerment.
+                </ng-template> 
+            </ngb-panel>
+        </ngb-accordion>
+        <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-light" (click)="modal.dismiss('Cross click')">Cancel</button>
+            <button type="button" class="btn btn-primary shadow-none"
+                (click)="modal.dismiss('Cross click')">Continue</button>
+        </div>
+    </div>
+</ng-template>

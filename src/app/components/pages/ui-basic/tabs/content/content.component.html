@@ -1,0 +1,250 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Default Tabs</h6>
+                </div>
+                <div class="ms-panel-body clearfix">
+                    <ul ngbNav #nav="ngbNav" class="nav nav-tabs d-flex nav-justified mb-4">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="nav"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Tabs Bordered</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.tabs-bordered</code> in <code>.nav-tabs</code></p>
+                    <ul ngbNav #navtwo="ngbNav" class="nav nav-tabs tabs-bordered d-flex nav-justified mb-4">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="navtwo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Left Tabs</h6>
+                </div>
+                <div class="ms-panel-body clearfix">
+                    <p class="ms-directions">Use <code>.left-tabs</code> in <code>.nav-tabs</code></p>
+                    <ul ngbNav #navthree="ngbNav" class="nav nav-tabs tabs-bordered left-tabs nav-justified">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="navthree"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Right Tabs</h6>
+                </div>
+                <div class="ms-panel-body clearfix">
+                    <p class="ms-directions">Use <code>.right-tabs</code> in <code>.nav-tabs</code></p>
+                    <ul ngbNav #navfour="ngbNav" class="nav nav-tabs tabs-bordered right-tabs nav-justified">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="navfour"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Tab Pills</h6>
+                </div>
+                <div class="ms-panel-body clearfix">
+                    <p class="ms-directions">Use <code>.tab-pills</code> with <code>.has-gap</code> in
+                        <code>.nav-tabs</code>
+                    </p>
+                    <ul ngbNav #navfive="ngbNav" class="nav nav-tabs d-flex tab-pills has-gap nav-justified mb-4">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="navfive"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Tab Round</h6>
+                </div>
+                <div class="ms-panel-body clearfix">
+                    <p class="ms-directions">Use <code>.tabs-round</code> with <code>.has-gap</code> in
+                        <code>.nav-tabs</code>
+                    </p>
+                    <ul ngbNav #navsix="ngbNav" class="nav nav-tabs d-flex tabs-round has-gap nav-justified mb-4">
+                        <li [ngbNavItem]="1">
+                            <a ngbNavLink>Overview</a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="2">
+                            <a ngbNavLink>Profile </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                                <p> Cras egestas nisi vel tempor dignissim. Ut condimentum iaculis ex nec ornare.
+                                    Vivamus sit amet elementum ante. Fusce eget erat volutpat </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                        <li [ngbNavItem]="3">
+                            <a ngbNavLink>Settings </a>
+                            <ng-template ngbNavContent>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna nunc, congue nec
+                                    laoreet sed, maximus non massa. Fusce vestibulum vel risus vitae tincidunt. </p>
+                            </ng-template>
+                        </li>
+                    </ul>
+                    <div [ngbNavOutlet]="navsix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Breadcrumbs</h6>
+                </div>
+                <div class="ms-panel-body pb-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <p class="ms-directions">Use <code>.breadcrumb-arrow-sep</code> for an arrow seperator</p>
+                                <ol class="breadcrumb breadcrumb-arrow-sep">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="ms-directions">Use <code>.breadcrumb-dark</code> for a dark background</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dark breadcrumb-arrow-sep">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dark">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Arrow Breadcrumbs</h6>
+                </div>
+                <div class="ms-panel-body pb-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="ms-directions">Use <code>.has-gap</code> and <code>.breadcrumb-arrow</code> for a gap between items and arrow shape breadcrumb</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow has-gap">
+                                    <li class="breadcrumb-item" aria-current="page"> <a routerLink="/"><i class="material-icons">home</i> Home</a> </li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="ms-directions">Use <code>.has-bg</code> for a background color for non-active items, <code>.has-bg-active</code> for active items</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow has-gap has-bg">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow has-bg ">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow has-bg-active">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="ms-directions">Use <code>.first-rounded</code> for rounded edges on the first item</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow has-gap first-rounded">
+                                    <li class="breadcrumb-item" aria-current="page"> <a routerLink="/"><i class="material-icons">home</i> Home</a> </li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="ms-directions">Use <code>.has-shadow</code> for a shadow effect on items</p>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-arrow first-rounded has-shadow">
+                                    <li class="breadcrumb-item"><a routerLink="/"><i class="material-icons">home</i> Home</a></li>
+                                    <li class="breadcrumb-item"><a routerLink="/">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

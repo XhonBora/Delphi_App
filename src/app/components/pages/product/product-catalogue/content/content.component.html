@@ -1,0 +1,25 @@
+<div class="ms-content-wrapper box">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of catelogue">
+            <div class="ms-card">
+                <div class="ms-card-img">
+                    <img [src]="item.img" [alt]="item.title">
+                </div>
+                <div class="ms-card-body ">
+                    <div class="wrapper-new2">
+                        <h6>{{item.title}}</h6>
+                        <span class="white">${{item.price | number:'1.2-2'}}</span>
+                    </div>
+                    <div class="wrapper-new1">
+                        <span>Total Order :<strong class="color-red">{{item.totalorder}}</strong> </span>
+                        <span>Revenue :<strong class="color-red">${{item.price * item.totalorder | number:'1.2-2'}}</strong></span>
+                    </div>
+                    <a routerLink="/product/product-detail/1" class="btn btn-primary btn-block">See More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

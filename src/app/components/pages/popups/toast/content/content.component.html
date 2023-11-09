@@ -1,0 +1,187 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Toast</h6> 
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Check <code>/assets/js/toast.js</code> for reference</p>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Top Left Success</h6>
+                            <button class="btn btn-primary mt-0" type="button" (click)="toastsuccess()"> Click Me </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Top Right Warning</h6>
+                            <button class="btn btn-primary mt-0" type="button" (click)="toastwarning()"> Click Me </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Bottom Left Danger</h6>
+                            <button class="btn btn-primary mt-0" type="button" (click)="toastdanger()"> Click Me </button>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <h6 class="section-title">Bottom Right Info</h6>
+                            <button class="btn btn-primary mt-0" type="button" (click)="toastinfo()"> Click Me </button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Toast Playground</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Mix and match whatever toast you would like to see</p>
+                    <form id="toast-form">
+                        <div class="form-row"> 
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="toastTitle">Toast Title</label>
+                                    <input type="text" class="form-control" placeholder="Toast Title" (change)="toasttitle($event)">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="toastMessage">Toast Message</label>
+                                    <input type="text" class="form-control"
+                                        placeholder="Toast Message" (change)="toastmessage($event)">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="ms-list mt-3 ms-list-display">
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="checkbox" name="closeButton" value="true" (change)="closeButton($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Close Button </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="checkbox" name="progressBar" value="true" (change)="progressBar($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Progress Bar </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="checkbox" name="preventDuplicates" value="true" (change)="preventDuplicates($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Prevent Duplicates </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="checkbox" name="debug" value="true" (change)="Debug($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Debug </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="ms-list mt-3 ms-list-display">
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="success" name="toastType" checked (change)="toastType($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Success </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="info" name="toastType" (change)="toastType($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Info </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="warning" name="toastType" (change)="toastType($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Warning </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="danger" name="toastType" (change)="toastType($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Danger </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul class="ms-list mt-3 ms-list-display">
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-top-left" name="toastPosition" checked (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Top Left </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-top-right" name="toastPosition" (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Top Right </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-top-center" name="toastPosition" (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Top Center </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-bottom-left" name="toastPosition" (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Bottom Left </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-bottom-right" name="toastPosition" (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Bottom Right </span>
+                                    </li>
+                                    <li>
+                                        <label class="ms-checkbox-wrap">
+                                            <input type="radio" value="toast-bottom-center" name="toastPosition" (change)="toastPosition($event)">
+                                            <i class="ms-checkbox-check"></i>
+                                        </label>
+                                        <span> Bottom Center </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-row mt-3">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-primary w-100" (click)="submit()">Toast
+                                    Me!</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-danger w-100" (click)="close()">Clear Toast Data</button>
+                            </div>
+                        </div>
+                    </form>
+<pre>
+Toast Title: {{toastTitle}}
+Toast Message: {{toastMessage}}
+Toast Type: {{toasttype}}
+Toast Position: {{toastposition}}
+Close Button: {{closebutton}}
+Progress Bar: {{progressbar}}
+Prevent Duplicates: {{preventduplicates}}
+Debug: {{debug}}
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,222 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Default Progress bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>type="{{'{state}'}}"</code> in <code>.progress-bar</code></p>
+                    <ngb-progressbar type="success" [value]="25"></ngb-progressbar>
+                    <ngb-progressbar type="info" [value]="50"></ngb-progressbar>
+                    <ngb-progressbar type="warning" [value]="75"></ngb-progressbar>
+                    <ngb-progressbar type="danger" [value]="100"></ngb-progressbar>
+                    <ngb-progressbar type="dark" [value]="75"></ngb-progressbar>
+                    <ngb-progressbar type="light" [value]="40"></ngb-progressbar>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Gradient Progress bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.bg-gradient-{{'{state}'}}</code> in <code>.progress-bar</code></p>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-gradient-light" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Striped Progress bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.progress-bar-striped</code> in <code>.progress-bar</code></p>
+                    <ngb-progressbar type="success" [value]="25" [striped]="true"></ngb-progressbar>
+                    <ngb-progressbar type="info" [value]="50" [striped]="true"></ngb-progressbar>
+                    <ngb-progressbar type="warning" [value]="75" [striped]="true"></ngb-progressbar>
+                    <ngb-progressbar type="danger" [value]="100" [striped]="true"></ngb-progressbar>
+                    <ngb-progressbar type="dark" [value]="75" [striped]="true"></ngb-progressbar>
+                    <ngb-progressbar type="light" [value]="40" [striped]="true"></ngb-progressbar>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Animated Progress bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.progress-bar-animated</code> in <code>.progress-bar</code></p>
+                    <ngb-progressbar type="success" [value]="25" [striped]="true" [animated]="true"></ngb-progressbar>
+                    <ngb-progressbar type="info" [value]="50" [striped]="true" [animated]="true"></ngb-progressbar>
+                    <ngb-progressbar type="warning" [value]="75" [striped]="true" [animated]="true"></ngb-progressbar>
+                    <ngb-progressbar type="danger" [value]="100" [striped]="true" [animated]="true"></ngb-progressbar>
+                    <ngb-progressbar type="dark" [value]="75" [striped]="true" [animated]="true"></ngb-progressbar>
+                    <ngb-progressbar type="light" [value]="40" [striped]="true" [animated]="true"></ngb-progressbar>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Progress bars with labels</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <span class="progress-label">Project 1</span>
+                    <ngb-progressbar type="success" [value]="25" [showValue]="true" textType="white"></ngb-progressbar>
+                    <span class="progress-label">Project 2</span>
+                    <ngb-progressbar type="info" [value]="50" [showValue]="true" textType="white"></ngb-progressbar>
+                    <span class="progress-label">Project 3</span>
+                    <ngb-progressbar type="warning" [value]="75" [showValue]="true" textType="white"></ngb-progressbar>
+                    <span class="progress-label">Project 4</span>
+                    <ngb-progressbar type="danger" [value]="100" [showValue]="true" textType="white"></ngb-progressbar>
+                    <span class="progress-label">Project 5</span>
+                    <ngb-progressbar type="dark" [value]="75" [showValue]="true" textType="white"></ngb-progressbar>
+                    <span class="progress-label">Project 6</span>
+                    <ngb-progressbar type="light" [value]="40" [showValue]="true" textType="white"></ngb-progressbar>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Small Progress Bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.progress-tiny</code> in <code>.progress</code></p>
+                    <span class="progress-label">Project 1</span><span class="progress-status">25%</span>
+                    <ngb-progressbar type="success" [value]="25" class="progress-tiny"></ngb-progressbar>
+                    <span class="progress-label">Project 1</span><span class="progress-status">50%</span>
+                    <ngb-progressbar type="info" [value]="50" class="progress-tiny"></ngb-progressbar>
+                    <span class="progress-label">Project 1</span><span class="progress-status">75%</span>
+                    <ngb-progressbar type="warning" [value]="75" class="progress-tiny"></ngb-progressbar>
+                    <span class="progress-label">Project 1</span><span class="progress-status">100%</span>
+                    <ngb-progressbar type="danger" [value]="100" class="progress-tiny"></ngb-progressbar>
+                    <span class="progress-label">Project 1</span><span class="progress-status">75%</span>
+                    <ngb-progressbar type="dark" [value]="75" class="progress-tiny"></ngb-progressbar>
+                    <span class="progress-label">Project 1</span><span class="progress-status">40%</span>
+                    <ngb-progressbar type="light" [value]="40" class="progress-tiny"></ngb-progressbar>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Round Progress Bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.bg-{{'{state}'}}</code> in <code>.progress-circle</code></p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="progress-rounded">
+                                <div class="progress-value">12%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="12" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded">
+                                <div class="progress-value">38.8%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-info" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="38.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded">
+                                <div class="progress-value">78%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="78.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded">
+                                <div class="progress-value">100%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57" stroke-width="16" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Small Round Progress Bars</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p class="ms-directions">Use <code>.progress-round-tiny</code> in <code>.progress-circle</code></p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="progress-rounded progress-round-tiny mb-4">
+                                <div class="progress-value">12%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="12" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded progress-round-tiny mb-4">
+                                <div class="progress-value">38.8%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-primary" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="38.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded progress-round-tiny mb-4">
+                                <div class="progress-value">78.8%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-secondary" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="78.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="progress-rounded progress-round-tiny mb-4">
+                                <div class="progress-value">100%</div>
+                                <svg>
+                                    <circle class="progress-cicle bg-dark" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                    </circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="col-md-12">
+                <div class="ms-panel ms-panel-fh">
+                    <div class="ms-panel-header">
+                        <h6>Favourite Orders</h6>
+                    </div>
+                    <div class="ms-panel-body order-circle">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <h6 class="text-center">Pizza</h6>
+                                <div class="progress-rounded progress-round-tiny">
+                                    <div class="progress-value">12%</div>
+                                    <svg>
+                                        <circle class="progress-cicle bg-success" cx="65" cy="65" r="57" stroke-width="4" fill="none" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <h6 class="text-center">Mexican Noodels</h6>
+                                <div class="progress-rounded progress-round-tiny">
+                                    <div class="progress-value">38.8%</div>
+                                    <svg>
+                                        <circle class="progress-cicle bg-primary" cx="65" cy="65" r="57" stroke-width="4" fill="none" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <h6 class="text-center">Spicy Salad</h6>
+                                <div class="progress-rounded progress-round-tiny">
+                                    <div class="progress-value">78.8%</div>
+                                    <svg>
+                                        <circle class="progress-cicle bg-secondary" cx="65" cy="65" r="57" stroke-width="4" fill="none" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6">
+                                <h6 class="text-center">French Fries</h6>
+                                <div class="progress-rounded progress-round-tiny">
+                                    <div class="progress-value">100%</div>
+                                    <svg>
+                                        <circle class="progress-cicle bg-dark" cx="65" cy="65" r="57" stroke-width="4" fill="none" [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                        </circle>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="ms-panel">
+                    <div class="ms-panel-header">
+                        <h6> Order List</h6>
+                    </div>
+                    <div class="ms-panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover thead-primary mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order ID</th>
+                                        <th scope="col">Order Name</th>
+                                        <th scope="col">Customer Name</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Order Status</th>
+                                        <th scope="col">Delivered Time</th>
+                                        <th scope="col">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of orderList">
+                                        <th scope="row">{{item.id}}</th>
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.customername}}</td>
+                                        <td>{{item.location}}</td>
+                                        <td>
+                                            <span class="badge badge-success" *ngIf="item.status === 'Delivered'">{{item.status}}</span>
+                                            <span class="badge badge-primary" *ngIf="item.status === 'Pending'">{{item.status}}</span>
+                                            <span class="badge badge-dark" *ngIf="item.status === 'Cancelled'">{{item.status}}</span>
+                                        </td>
+                                        <td>{{item.deliverytime}}</td>
+                                        <td>${{item.price | number:'1.2-2'}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

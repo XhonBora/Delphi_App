@@ -1,0 +1,96 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Draggable Cards</h6>
+                </div>
+                <div class="ms-panel-body pb-0">
+                    <div class="row ms-sortable" [sortablejs]="cardblock">
+                        <div class="col-lg-3 col-md-6 col-sm-6 ms-draggable" *ngFor="let item of cardblock">
+                            <div class="ms-card ">
+                                <div class="ms-card-img">
+                                    <img src="{{item.img}}" alt="{{item.title}}">
+                                </div>
+                                <div class="ms-card-body">
+                                    <h6>{{item.title}}</h6>
+                                    <p>{{item.text}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Draggable Lists</h6>
+                    <p>Drag and Drop Items between both Lists</p>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="mb-4">To Do</h6>
+                            <ul class="ms-list ms-sortable-list" [sortablejs]="sortablelist">
+                                <li class="ms-list-item bordered media" *ngFor="let item of sortablelist">
+                                    <i class="material-icons align-self-center">{{item.icon}}</i>
+                                    <div class="media-body">
+                                        <h5>{{item.title}}</h5>
+                                        <p>{{item.text}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="mb-4 mt-sm-4 mt-md-0">In Progress</h6>
+                            <ul class="ms-list ms-droppable ms-sortable-list" [sortablejs]="progresslist">
+                                <li class="ms-list-item bordered media" *ngFor="let item of progresslist">
+                                    <i class="material-icons align-self-center">{{item.icon}}</i>
+                                    <div class="media-body">
+                                        <h5>{{item.title}}</h5>
+                                        <p>{{item.text}}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Sortable List</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ul class="ms-list ms-sortable" [sortablejs]="sortablelist">
+                        <li class="ms-list-item bordered media" *ngFor="let item of sortablelist">
+                            <div class="media-body">
+                                <h5>{{item.title}}</h5>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Sortable List with Images</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <ul class="ms-list ms-droppable ms-sortable" [sortablejs]="todolist">
+                        <li class="ms-list-item bordered media ms-draggable" *ngFor="let item of todolist">
+                            <img class="ms-img-round" src="{{item.img}}" alt="{{item.title}}">
+                            <div class="media-body">
+                                <h5>{{item.title}}</h5>
+                                <p>{{item.text}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

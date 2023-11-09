@@ -1,0 +1,422 @@
+<div class="ms-content-wrapper cardspage">
+    <div class="ms-profile-overview profilepage">
+        <div class="ms-profile-cover">
+            <img class="ms-profile-img" src="assets/img/costic/customer-5.jpg" alt="people">
+            <div class="ms-profile-user-info">
+                <h1 class="ms-profile-username">Chihoo Hwang</h1>
+                <h2 class="ms-profile-role">Professional Chef</h2>
+            </div>
+            <div class="ms-profile-user-buttons">
+                <a routerLink="/" class="btn btn-primary mr-2"> <i class="material-icons">person_add</i> Follow</a>
+                <a routerLink="/" class="btn btn-light"> <i class="material-icons">file_download</i> Download Resume</a>
+            </div>
+        </div>
+        <ul ngbNav #nav="ngbNav" class="ms-profile-navigation nav nav-tabs tabs-bordered">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink> Overview </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-xl-7 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">About Me</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non elit nisl.
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                        himenaeos.
+                                        Aenean luctus, justo id pellentesque imperdiet, augue metus ornare quam, in
+                                        pulvinar massa erat nec dui. Nam at facilisis nulla.
+                                    </p>
+                                    <div class="ms-profile-skills">
+                                        <h2 class="section-title">Professional Skills</h2>
+                                        <ul class="ms-skill-list">
+                                            <li class="ms-skill" *ngFor="let item of skills">{{item.title}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <ul class="ms-profile-stats">
+                                        <li>
+                                            <h3 class="ms-count">5790</h3>
+                                            <span>Followers</span>
+                                        </li>
+                                        <li>
+                                            <h3 class="ms-count">4.8</h3>
+                                            <span>User Rating</span>
+                                        </li>
+                                    </ul>
+                                    <h2 class="section-title">Basic Information</h2>
+                                    <table class="table ms-profile-information">
+                                        <tbody>
+                                            <tr *ngFor="let item of information">
+                                                <th scope="row">{{item.title}}</th>
+                                                <td>{{item.text}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">Cheffs on Dutty</h2>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-md-6 col-sm-12" *ngFor="let item of workexp">
+                                            <div class="media ms-profile-experience">
+                                                <div class="mr-2 align-self-center">
+                                                    <img src="{{item.logo}}" class="ms-img-round ms-img-small"
+                                                        alt="{{item.name}}">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4>{{item.name}}</h4>
+                                                    <p>{{item.time}}</p>
+                                                    <p>{{item.designation}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-12">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">Skill level</h2>
+                                    <div *ngFor="let item of skills">
+                                        <span class="progress-label">{{item.title}}</span>
+                                        <span class="progress-status">{{item.limit}}%</span>
+                                        <div class="progress progress-tiny">
+                                            <div class="progress-bar bg-primary" [style.width.%]="item.limit"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body">
+                                    <h2 class="section-title">My Timeline</h2>
+                                    <ul class="ms-activity-log">
+                                        <li>
+                                            <div class="ms-btn-icon btn-pill icon btn-success">
+                                                <i class="flaticon-tick-inside-circle"></i>
+                                            </div>
+                                            <h6>Computer Science Degree</h6>
+                                            <span> <i class="material-icons">event</i>1 January, 2018</span>
+                                            <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Quisque scelerisque diam non nisi semper, ula in sodales vehicula....
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="ms-btn-icon btn-pill icon btn-info">
+                                                <i class="flaticon-information"></i>
+                                            </div>
+                                            <h6>Landed first Job</h6>
+                                            <span> <i class="material-icons">event</i>4 March, 2018</span>
+                                            <p class="fs-14">Curabitur purus sem, malesuada eu luctus eget, suscipit sed
+                                                turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi
+                                                sollicitudin...</p>
+                                        </li>
+                                        <li>
+                                            <div class="ms-btn-icon btn-pill icon btn-success">
+                                                <i class="flaticon-tick-inside-circle"></i>
+                                            </div>
+                                            <h6>Started my own Company</h6>
+                                            <span> <i class="material-icons">event</i>1 March, 2022</span>
+                                            <p class="fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Quisque scelerisque diam non nisi semper, ula in sodales vehicula....
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="ms-panel">
+                                <div class="ms-panel-body pb-0">
+                                    <h2 class="section-title">Your Latest Posts</h2>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-sm-6" *ngFor="let item of projects">
+                                            <div class="ms-card">
+                                                <div class="ms-card-body">
+                                                    <div class="media fs-14">
+                                                        <div class="mr-2 align-self-center">
+                                                            <img src="{{item.userimg}}" class="ms-img-round"
+                                                                alt="{{item.username}}">
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h6>{{item.username}} </h6>
+                                                            <div class="dropdown float-right" ngbDropdown>
+                                                                <a href="javascript:void(0)" class="toggle-icon-none" ngbDropdownToggle>
+                                                                    <i class="material-icons">more_vert</i>
+                                                                </a>
+                                                                <ul ngbDropdownMenu
+                                                                    class="dropdown-menu dropdown-menu-right">
+                                                                    <li class="ms-dropdown-list">
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Comment</span>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Share</span>
+                                                                            </div>
+                                                                        </a>
+                                                                        <a class="media p-2" routerLink="/">
+                                                                            <div class="media-body">
+                                                                                <span>Favorite</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <p class="fs-12 my-1 text-disabled">{{item.time}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <h6>{{item.title}}</h6>
+                                                    <p>{{item.text}}</p>
+                                                </div>
+                                                <div class="ms-card-img">
+                                                    <img src="{{item.postimg}}" alt="{{item.title}}">
+                                                </div>
+                                                <div class="ms-card-footer text-disabled d-flex">
+                                                    <div class="ms-card-options">
+                                                        <i class="material-icons">favorite</i> {{item.likes}}
+                                                    </div>
+                                                    <div class="ms-card-options">
+                                                        <i class="material-icons">comment</i> {{item.comments}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Professional Skills </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="ms-panel">
+                                <div class="ms-panel-header">
+                                    <h6>Round Progress Bars</h6>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <p class="ms-directions">Use <code>.bg-{{'{state}'}}</code> in
+                                        <code>.progress-circle</code></p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">12%</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-success" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="12"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 12">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">38.8%</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-info" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="38.8"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 38.8">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">78%</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-warning" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="78.8"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 78.8">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="progress-rounded">
+                                                <div class="progress-value">100%</div>
+                                                <svg>
+                                                    <circle class="progress-cicle bg-danger" cx="65" cy="65" r="57"
+                                                        stroke-width="16" fill="none" aria-valuenow="100"
+                                                        aria-orientation="vertical" aria-valuemin="0"
+                                                        aria-valuemax="100" role="slider"
+                                                        [style.strokeDashoffset.px]="358.141563 - (358.141563 / 100) * 100">
+                                                    </circle>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ms-panel ms-panel-fh">
+                                <div class="ms-panel-header">
+                                    <h6>Small Progress Bars</h6>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <p class="ms-directions">Use <code>.progress-tiny</code> in <code>.progress</code></p>
+                                    <span class="progress-label">Project 1</span><span class="progress-status">25%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Project 2</span><span class="progress-status">50%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Project 3</span><span class="progress-status">75%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Project 4</span><span class="progress-status">100%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Project 5</span><span class="progress-status">75%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-dark" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span class="progress-label">Project 6</span><span class="progress-status">40%</span>
+                                    <div class="progress progress-tiny">
+                                        <div class="progress-bar bg-light" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ms-panel ms-panel-fh ms-widget ms-email-widget">
+                                <div class="ms-panel-header">
+                                    <div class="media clearfix">
+                                        <div class="mr-3 align-self-center">
+                                            <img src="assets/img/costic/customer-7.jpg" class="ms-img-small ms-img-round"
+                                                alt="people">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>Heather Brown</h6>
+                                        </div>
+                                        <ul class="ms-email-options">
+                                            <li><a routerLink="/" class="text-disabled"> <i class="material-icons">local_offer</i> Tags
+                                                </a></li>
+                                            <li><a routerLink="/" class="text-disabled"> <i class="material-icons">folder</i> Folders
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ms-panel-body">
+                                    <form method="post" class="clearfix">
+                                        <div class="form-group mb-4">
+                                            <input type="text" class="form-control" placeholder="Recipients">
+                                            <div class="ms-cc">
+                                                <i class="material-icons">person</i> CC & BCC
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <input type="email" class="form-control" placeholder="Subject">
+                                        </div>
+                                        <div class="form-group mb-2">
+                                            <textarea rows="5" class="form-control" placeholder="Message"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary float-right" type="submit">Send Mail</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ms-card ms-widget ms-profile-widget ms-card-fh">
+                                <div class="ms-card-img">
+                                    <img src="assets/img/costic/banner-1000x370.jpg" alt="card_img">
+                                </div>
+                                <img src="assets/img/costic/customer-10.jpg" class="ms-img-large ms-img-round ms-user-img"
+                                    alt="Anny Farisha">
+                                <div class="ms-card-body">
+                                    <h2>Anny Farisha</h2>
+                                    <span>Quality Inspector</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in arcu turpis. Nunc</p>
+                                    <button type="button" class="btn btn-gradient-primary" name="button"><i
+                                            class="material-icons">person_add</i> Follow</button>
+                                    <ul class="ms-profile-stats">
+                                        <li>
+                                            <h3 class="ms-count">5790</h3>
+                                            <span>Followers</span>
+                                        </li>
+                                        <li>
+                                            <h3 class="ms-count">4.8</h3>
+                                            <span>User Rating</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink>Portfolio </a>
+                <ng-template ngbNavContent>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of cardblock">
+                            <div class="ms-card">
+                                <div class="ms-card-img">
+                                    <img src="{{item.img}}" alt="{{item.title}}">
+                                </div>
+                                <div class="ms-card-body">
+                                    <h6>{{item.title}}</h6>
+                                    <p>{{item.text}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6" *ngFor="let item of statbox">
+                            <a routerLink="/">
+                                <div class="ms-panel ms-widget ms-panel-hoverable has-border ms-has-new-msg ms-notification-widget">
+                                    <span class="msg-count">{{item.notification}}</span>
+                                    <div class="ms-panel-body media">
+                                        <i class="material-icons">{{item.icon}}</i>
+                                        <div class="media-body">
+                                            <h6>{{item.title}}</h6>
+                                            <span>{{item.text}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+        </ul>
+    </div>
+    <div [ngbNavOutlet]="nav"></div>
+
+</div>

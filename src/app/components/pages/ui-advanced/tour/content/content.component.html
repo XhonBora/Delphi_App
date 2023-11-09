@@ -1,0 +1,67 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Section 1</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div tourAnchor="step-1">
+                                <p class="ms-directions">Check <code>/src/app/pages/ui-advance/tour</code> for reference</p>
+                                <p>
+                                    Tour Popovers can be positioned to the left, right, top or bottom
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p tourAnchor="step-2">
+                                You can Also add HTML Markup to the popover header and body
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Section 2</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <p tourAnchor="step-3">
+                        This is a popover with an image wrapped inside it
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Section 3</h6>
+                </div> 
+                <div class="ms-panel-body">
+                    <p tourAnchor="step-4">
+                        You can also control the tour with your keyboard left and right buttons
+                    </p>
+                </div> 
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Section 4</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <div tourAnchor="step-5">
+                        <p> And ofcourse you can always play the tour again </p>
+                        <button type="button" (click)="tourService.toggle()" class="btn btn-primary">Replay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<tour-step-template></tour-step-template>

@@ -1,0 +1,242 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Star Rating</h6>
+                </div>
+                <div class="ms-panel-body pb-1">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate" class="ms-star-rating rating-bordered">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                            class="material-icons">star_border</i> </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate" class="ms-star-rating rating-fill">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                            class="material-icons">star</i> </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill rating-circle">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                            class="material-icons">star</i> </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered rating-circle">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"> <i
+                                            class="material-icons">star</i> </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Letter Rating</h6>
+                </div>
+                <div class="ms-panel-body pb-1">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered letter-rating character-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill letter-rating character-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill rating-circle letter-rating character-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered rating-circle letter-rating character-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Number Rating</h6>
+                </div>
+                <div class="ms-panel-body pb-1">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered letter-rating number-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill letter-rating number-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill rating-circle letter-rating number-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered rating-circle letter-rating number-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Heart Rating</h6>
+                </div>
+                <div class="ms-panel-body pb-1">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered heart-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i class="material-icons">favorite_border</i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill heart-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i class="material-icons">favorite</i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill rating-circle heart-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i class="material-icons">favorite</i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-bordered rating-circle heart-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i class="material-icons">favorite</i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Misc. Rating</h6>
+                </div>
+                <div class="ms-panel-body pb-1">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating misc-number number-rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating rating-fill misc-checks">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100">
+                                        <i></i>
+                                    </li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating misc-blocks">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"></li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-6">
+                            <ngb-rating [max]="5" [(rate)]="currentRate"
+                                class="ms-star-rating misc-square">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <li class="ms-rating-item" [class.rated]="fill === 100"></li>
+                                </ng-template>
+                            </ngb-rating>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

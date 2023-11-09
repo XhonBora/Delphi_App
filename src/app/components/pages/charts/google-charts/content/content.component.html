@@ -1,0 +1,68 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Bar Chart</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <google-chart [data]="barChart"></google-chart>
+                    <div id="bar-chart"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Line Chart</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <google-chart [data]="lineChart"></google-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Stacked Bar Chart</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <google-chart [data]="stackedColumnChart"></google-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Pie Chart</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <google-chart [data]="pieChart"></google-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Scatter Chart</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <google-chart [data]="scatterChart"></google-chart>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Gauge Chart</h6>
+                </div>
+                <div class="ms-panel-body" style="margin: 0 auto;">
+                    <google-chart [data]="gaugeChart"></google-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

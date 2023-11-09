@@ -1,0 +1,401 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <app-breadcrumb></app-breadcrumb>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel">
+                <div class="ms-panel-header">
+                    <h6>Signup Form</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <form [formGroup]="signupForm" (validSubmit)="onSubmit()" class="clearfix">
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label>First name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" formControlName="Firstname"
+                                        placeholder="First name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Last name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" formControlName="Lastname"
+                                        placeholder="Last name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label>Email Address</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address"
+                                        formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <label>Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password"
+                                        formControlName="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check pl-0">
+                                <label class="ms-checkbox-wrap">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                    <i class="ms-checkbox-check"></i>
+                                </label>
+                                <span> Agree to terms and conditions </span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mt-4 d-block w-100" type="submit">Create Account</button>
+                    </form>
+                    <p class="mb-0 mt-3">Already Have an account? <a class="btn-link" routerLink="/">Login to
+                            Account</a> </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Login Form</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <form [formGroup]="loginForm" (validSubmit)="onSubmit()" class="clearfix">
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label>Email Address</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address"
+                                        formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2">
+                                <label>Password</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Password"
+                                        formControlName="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="ms-checkbox-wrap">
+                                <input class="form-check-input" type="checkbox" value="">
+                                <i class="ms-checkbox-check"></i>
+                            </label>
+                            <span> Remember Password </span>
+                        </div>
+                        <button class="btn btn-primary mt-4 d-block w-100" type="submit">Sign In</button>
+                    </form>
+                    <p class="mb-0 mt-3">Don't have an account? <a class="btn-link" routerLink="/">Create an Account</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Contact Form</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <form [formGroup]="contactForm" (validSubmit)="onSubmit()" class="clearfix">
+                        <div class="form-row">
+                            <div class="col-xl-6 col-md-12 mb-3">
+                                <label>Full Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Full Name"
+                                        formControlName="Fullname">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <label>Email Address</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address"
+                                        formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Message</label>
+                                <div class="input-group">
+                                    <textarea rows="5" class="form-control" placeholder="Message"
+                                        formControlName="Message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary float-right" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Payment Form</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <form [formGroup]="paymentForm" (validSubmit)="onSubmit()" class="clearfix">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <label>Payment Method</label>
+                                <ul class="ms-payment-container">
+                                    <li>
+                                        <div class="ms-radio-img">
+                                            <input type="radio" name="payment-method" value="">
+                                            <div class="ms-payment-img">
+                                                <img src="assets/img/payment/payment-payoneer.png" alt="payment">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms-radio-img">
+                                            <input type="radio" name="payment-method" value="">
+                                            <div class="ms-payment-img">
+                                                <img src="assets/img/payment/payment-visa.png" alt="payment">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms-radio-img">
+                                            <input type="radio" name="payment-method" value="">
+                                            <div class="ms-payment-img">
+                                                <img src="assets/img/payment/payment-paypal.png" alt="payment">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ms-radio-img">
+                                            <input type="radio" name="payment-method" value="">
+                                            <div class="ms-payment-img">
+                                                <img src="assets/img/payment/payment-master.png" alt="payment">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xl-6 col-md-12 mb-3">
+                                <label>Card Holder Name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Card Holder Name"
+                                        formControlName="Cardholdername">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-12">
+                                <label>Card Number</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Card Number"
+                                        formControlName="Cardnumber">
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-12">
+                                <label>Month</label>
+                                <div class="input-group">
+                                    <select class="form-control" formControlName="Month">
+                                        <option value="01" selected>01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-12">
+                                <label>Year</label>
+                                <div class="input-group">
+                                    <select class="form-control" formControlName="Year">
+                                        <option value="2022" selected>2022</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-12">
+                                <label for="validationCustom17" placement="left"
+                                    ngbTooltip="3 digit number at the back of your card">CVV <i
+                                        class="material-icons">info_outline</i> </label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="CVV" formControlName="Cvv">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary float-right" type="submit">Save and Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="ms-panel ms-panel-fh">
+                <div class="ms-panel-header">
+                    <h6>Checkout Form</h6>
+                </div>
+                <div class="ms-panel-body">
+                    <form [formGroup]="checkoutForm" (validSubmit)="onSubmit()" class="clearfix">
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label>First name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="First name"
+                                        formControlName="Firstname">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Last name</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Last name"
+                                        formControlName="Lastname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label>Email Address</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address"
+                                        formControlName="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Phone Number</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Phone Number"
+                                        formControlName="Phone">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Country</label>
+                                <div class="input-group">
+                                    <select class="form-control" formControlName="Country">
+                                        <option value="01" selected>01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>State</label>
+                                <div class="input-group">
+                                    <select class="form-control" formControlName="State">
+                                        <option value="2022" selected>2022</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>City</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="City" formControlName="City">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label>Zip code</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Zip code"
+                                        formControlName="Zipcode">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label>Address</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Address"
+                                        formControlName="Address">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary d-block float-right" type="submit">Save and Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ms-panel ms-panel-fh">
+                        <div class="ms-panel-header">
+                            <h6>Subscribe Form</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <form [formGroup]="subscribeForm" (validSubmit)="onSubmit()" class="clearfix">
+                                <div class="form-row">
+                                    <div class="col-xl-6 col-md-12 mb-3">
+                                        <label>Full Name</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Full Name" formControlName="Fullname">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-12">
+                                        <label>Email Address</label>
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" placeholder="Email Address" formControlName="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-100 d-block" type="submit">Subscribe Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="ms-panel ms-panel-fh">
+                        <div class="ms-panel-header">
+                            <h6>Recover Password Form</h6>
+                        </div>
+                        <div class="ms-panel-body">
+                            <form [formGroup]="forgotpasswordForm" (validSubmit)="onSubmit()" class="clearfix">
+                                <div class="form-row">
+                                    <div class="col-xl-6 col-md-12 mb-3">
+                                        <label>Username</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Username" formControlName="Username">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-12">
+                                        <label for="validationCustom30">Email Address</label>
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" placeholder="Email Address" formControlName="Email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary w-100 d-block" type="submit">Send Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
