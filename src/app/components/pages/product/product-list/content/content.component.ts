@@ -64,30 +64,25 @@ export class ContentComponent implements OnInit {
       }
     }
   };
+
   onSearch(query: string = '') {
-    this.source.setFilter([
-      // fields we want to include in the search
-      {
-        field: 'id',
-        search: query
-      },
-      {
-        field: 'name',
-        search: query
-      },
-      {
-        field: 'qty',
-        search: query
-      },
-      {
-        field: 'status',
-        search: query
-      },
-      {
-        field: 'price',
-        search: query
-      },
-    ], false);
+    const filter = [
+      { field: 'id', search: query },
+      { field: 'name', search: query },
+      { field: 'qty', search: query },
+      { field: 'status', search: query },
+      { field: 'price', search: query },
+    ];
+  
+    if (query.trim() === '') {
+      this.removeFilter();
+    } else {
+      this.source.setFilter(filter, false);
+    }
+  }
+
+  removeFilter() {
+    this.source.reset(); 
   }
 
   ngOnInit(): void {
