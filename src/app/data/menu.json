@@ -13,20 +13,5 @@
         "qty": 5421,
         "status": "In Stock",
         "price": 32
-    },
-    {
-        "id": 1,
-        "img": [
-            "assets/img/costic/pizza.jpg",
-            "assets/img/costic/banner-1.jpg",
-            "assets/img/costic/banner-2.jpg",
-            "assets/img/costic/banner-3.jpg"
-        ],
-        "name": "lasko",
-        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolor sit amet, consectetur adipiscing",
-        "longdesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book type and scrambled it to make a type specimen book.",
-        "qty": 5421,
-        "status": "In Stock",
-        "price": 32
     }
 ]
