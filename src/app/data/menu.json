@@ -664,5 +664,491 @@
     "name": "Apfelschorle",
     "qty": 1,
     "price": 2.9
+  },
+  {
+    "id": 112,
+    "name": "Malzbier",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 113,
+    "name": "Mineralwasser",
+    "qty": 1,
+    "price": 3.0
+  },
+  {
+    "id": 114,
+    "name": "Mineralwasser still",
+    "qty": 1,
+    "price": 3.0
+  },
+  {
+    "id": 115,
+    "name": "Mineralwasser",
+    "qty": 1,
+    "price": 6.2
+  },
+  {
+    "id": 116,
+    "name": "Tonic Water",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 117,
+    "name": "Bitter Lemon",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 118,
+    "name": "Ginger Ale",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 119,
+    "name": "Apfelsaft",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 120,
+    "name": "Orangensaft",
+    "qty": 1,
+    "price": 3.6
+  },
+  {
+    "id": 121,
+    "name": "Traubensaft",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 122,
+    "name": "Tomatensaft",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 123,
+    "name": "Johannisbeersaft",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 124,
+    "name": "Bananensaft",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 125,
+    "name": "Multivitaminsaft",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 126,
+    "name": "Kirschsaft",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 127,
+    "name": "KIBA (Kirsch-Bananensaft)",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 128,
+    "name": "Tasse Kaffee",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 129,
+    "name": "Griechischer Mocca",
+    "qty": 1,
+    "price": 3.0
+  },
+  {
+    "id": 130,
+    "name": "Glas Tee (Pfefferminztee, Früchtetee, Kamillentee, Grüner Tee, Schwarzer Tee)",
+    "qty": 1,
+    "price": 2.7
+  },
+  {
+    "id": 131,
+    "name": "Glühwein",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 132,
+    "name": "Cappuccino",
+    "qty": 1,
+    "price": 3.2
+  },
+  {
+    "id": 133,
+    "name": "Cappuccino Special",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 134,
+    "name": "Café au lait",
+    "qty": 1,
+    "price": 3.3
+  },
+  {
+    "id": 135,
+    "name": "Latte macchiato",
+    "qty": 1,
+    "price": 3.2
+  },
+  {
+    "id": 136,
+    "name": "Espresso",
+    "qty": 1,
+    "price": 2.6
+  },
+  {
+    "id": 137,
+    "name": "Metaxa *****",
+    "qty": 1,
+    "price": 4.5
+  },
+  {
+    "id": 138,
+    "name": "Metaxa *******",
+    "qty": 1,
+    "price": 5.0
+  },
+  {
+    "id": 139,
+    "name": "Metaxa flambiert",
+    "qty": 1,
+    "price": 5.2
+  },
+  {
+    "id": 140,
+    "name": "Metaxa very old",
+    "qty": 1,
+    "price": 5.9
+  },
+  {
+    "id": 141,
+    "name": "Ouzo",
+    "qty": 1,
+    "price": 2.2
+  },
+  {
+    "id": 142,
+    "name": "Gin-Tonic",
+    "qty": 1,
+    "price": 3.8
+  },
+  {
+    "id": 143,
+    "name": "Fernet Branca",
+    "qty": 1,
+    "price": 3.8
+  },
+  {
+    "id": 144,
+    "name": "Jägermeister",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 145,
+    "name": "Underberg",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 146,
+    "name": "Freiberger Magenwürze",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 147,
+    "name": "Griech. Bananenlikör",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 148,
+    "name": "Griech. Rosélikör",
+    "qty": 1,
+    "price": 3.5
+  },
+  {
+    "id": 149,
+    "name": "Zipuro (griech. Branntwein)",
+    "qty": 1,
+    "price": 4.5
+  },
+  {
+    "id": 150,
+    "name": "Martini bianco",
+    "qty": 1,
+    "price": 4.5
+  },
+  {
+    "id": 151,
+    "name": "Whisky",
+    "qty": 1,
+    "price": 5.1
+  },
+  {
+    "id": 152,
+    "name": "Bacardi Cola",
+    "qty": 1,
+    "price": 5.1
+  },
+  {
+    "id": 153,
+    "name": "Campari Orange",
+    "qty": 1,
+    "price": 5.2
+  },
+  {
+    "id": 154,
+    "name": "Wodka",
+    "qty": 1,
+    "price": 4.4
+  },
+  {
+    "id": 155,
+    "name": "Baileys",
+    "qty": 1,
+    "price": 4.5
+  },
+  {
+    "id": 156,
+    "name": "Ramazotti",
+    "qty": 1,
+    "price": 3.4
+  },
+  {
+    "id": 157,
+    "name": "Tekilla",
+    "qty": 1,
+    "price": 3.4
+  },
+  {
+    "id": 158,
+    "name": "ROSEWEIN",
+    "qty": 1,
+    "price": 3.2
+  },
+  {
+    "id": 159,
+    "name": "DEMESTIKA",
+    "qty": 1,
+    "price": 3.2
+  },
+  {
+    "id": 160,
+    "name": "MAKEDONIKOS",
+    "qty": 1,
+    "price": 3.2
+  },
+  {
+    "id": 161,
+    "name": "IMIGLIKOS",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 162,
+    "name": "NAOUSSA",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 163,
+    "name": "ATHOS",
+    "qty": 1,
+    "price": 3.1
+  },
+  {
+    "id": 164,
+    "name": "HAUSWEIN",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 165,
+    "name": "DEMESTIKA",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 166,
+    "name": "MAKEDONIKOS",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 167,
+    "name": "IMIGLIKOS",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 168,
+    "name": "MAFRODAFNE",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 169,
+    "name": "ROSEWEIN",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 170,
+    "name": "ATHOS",
+    "qty": 1,
+    "price": 2.1
+  },
+  {
+    "id": 171,
+    "name": "RETSINA",
+    "qty": 1,
+    "price": 5.1
+  },
+  {
+    "id": 172,
+    "name": "DEMESTIKA",
+    "qty": 1,
+    "price": 5.2
+  },
+  {
+    "id": 173,
+    "name": "Makedonikos",
+    "qty": 1,
+    "price": 5.7
+  },
+  {
+    "id": 174,
+    "name": "Imiglikos",
+    "qty": 1,
+    "price": 5.7
+  },
+  {
+    "id": 175,
+    "name": "Samos",
+    "qty": 1,
+    "price": 6.7
+  },
+  {
+    "id": 176,
+    "name": "Athos",
+    "qty": 1,
+    "price": 5.7
+  },
+  {
+    "id": 177,
+    "name": "Athos",
+    "qty": 1,
+    "price": 20.8
+  },
+  {
+    "id": 178,
+    "name": "Demestika",
+    "qty": 1,
+    "price": 20.8
+  },
+  {
+    "id": 179,
+    "name": "Makedonikos",
+    "qty": 1,
+    "price": 22.8
+  },
+  {
+    "id": 180,
+    "name": "Samos",
+    "qty": 1,
+    "price": 20.8
+  },
+  {
+    "id": 181,
+    "name": "Imiglikos",
+    "qty": 1,
+    "price": 20.8
+  },
+  {
+    "id": 182,
+    "name": "Retsina",
+    "qty": 1,
+    "price": 19.9
+  },
+  {
+    "id": 183,
+    "name": "Athos",
+    "qty": 1,
+    "price": 8.6
+  },
+  {
+    "id": 184,
+    "name": "Demestika",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 185,
+    "name": "Makedonikos",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 186,
+    "name": "Imiglikos",
+    "qty": 1,
+    "price": 21.8
+  },
+  {
+    "id": 187,
+    "name": "Samos",
+    "qty": 1,
+    "price": 21.9
+  },
+  {
+    "id": 188,
+    "name": "Athos",
+    "qty": 1,
+    "price": 20.1
+  },
+  {
+    "id": 189,
+    "name": "Makedonikos",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 190,
+    "name": "Demestika",
+    "qty": 1,
+    "price": 21.9
+  },
+  {
+    "id": 191,
+    "name": "Imiglikos",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 192,
+    "name": "Retsina",
+    "qty": 1,
+    "price": 22.9
   }
 ]
