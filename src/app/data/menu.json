@@ -1,17 +1,668 @@
 [
-    {
-        "id": 1,
-        "img": [
-            "assets/img/costic/pizza.jpg",
-            "assets/img/costic/banner-1.jpg",
-            "assets/img/costic/banner-2.jpg",
-            "assets/img/costic/banner-3.jpg"
-        ],
-        "name": "pizza",
-        "shortdesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, dolor sit amet, consectetur adipiscing",
-        "longdesc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book type and scrambled it to make a type specimen book.",
-        "qty": 5421,
-        "status": "In Stock",
-        "price": 32
-    }
+  {
+    "id": 1,
+    "name": "OLIVEN 2 UND PEPERONI",
+    "qty": 1,
+    "price": 5.3
+  },
+  {
+    "id": 2,
+    "name": "ZAZIKI",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 3,
+    "name": "TOMATENSALAT",
+    "qty": 1,
+    "price": 4.3
+  },
+  {
+    "id": 4,
+    "name": "KRAUTSALAT",
+    "qty": 1,
+    "price": 4.3
+  },
+  {
+    "id": 5,
+    "name": "HAUSSALAT",
+    "qty": 1,
+    "price": 4.3
+  },
+  {
+    "id": 6,
+    "name": "APERITIV-PLATTE",
+    "qty": 1,
+    "price": 10.9
+  },
+  {
+    "id": 7,
+    "name": "TARAMA",
+    "qty": 1,
+    "price": 5.2
+  },
+  {
+    "id": 8,
+    "name": "WARME VORSPEISENPLATTE FÜR 1 PERSON",
+    "qty": 1,
+    "price": 11.9
+  },
+  {
+    "id": 9,
+    "name": "WARME VORSPEISENPLATTE FÜR 2 PERSONEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 10,
+    "name": "DOLMADAKIA",
+    "qty": 1,
+    "price": 5.9
+  },
+  {
+    "id": 11,
+    "name": "KNOBLAUCHBROT",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 12,
+    "name": "PITABROT",
+    "qty": 1,
+    "price": 4.4
+  },
+  {
+    "id": 13,
+    "name": "SPEZIAL- AUBERGINEN",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 14,
+    "name": "AUBERGINEN AUS DEM BACKOFEN",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 15,
+    "name": "SPEZIAL ZUCCHINI",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 16,
+    "name": "SAGANAKI",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 17,
+    "name": "SCHAFSKÄSE 2 GEGRILLT",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 18,
+    "name": "DICKE BOHNEN",
+    "qty": 1,
+    "price": 7.5
+  },
+  {
+    "id": 19,
+    "name": "PEPERONI 2 GEGRILLT",
+    "qty": 1,
+    "price": 7.5
+  },
+  {
+    "id": 20,
+    "name": "PAPRIKA FLORINIS",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 21,
+    "name": "TIROPITAKIA",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 22,
+    "name": "SPANAKOPITAKIA",
+    "qty": 1,
+    "price": 6.9
+  },
+  {
+    "id": 23,
+    "name": "BOHNENSUPPE",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 24,
+    "name": "HÜHNERSUPPE",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 25,
+    "name": "GULASCHSUPPE",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 26,
+    "name": "TOMATENSUPPE",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 27,
+    "name": "ZWIEBELSUPPE",
+    "qty": 1,
+    "price": 4.9
+  },
+  {
+    "id": 28,
+    "name": "BAUERNSALAT",
+    "qty": 1,
+    "price": 9.9
+  },
+  {
+    "id": 29,
+    "name": "SALAT CHEF",
+    "qty": 1,
+    "price": 10.9
+  },
+  {
+    "id": 30,
+    "name": "SALAT “COPACABANA”",
+    "qty": 1,
+    "price": 12.5
+  },
+  {
+    "id": 31,
+    "name": "GYROS – PITA",
+    "qty": 1,
+    "price": 13.6
+  },
+  {
+    "id": 32,
+    "name": "GYROS MIT ZAZIKI",
+    "qty": 1,
+    "price": 13.9
+  },
+  {
+    "id": 33,
+    "name": "SUFLAKI",
+    "qty": 1,
+    "price": 13.9
+  },
+  {
+    "id": 34,
+    "name": "BIFTEKI",
+    "qty": 1,
+    "price": 14.4
+  },
+  {
+    "id": 35,
+    "name": "STEAKS VOM SCHWEINERÜCKEN",
+    "qty": 1,
+    "price": 13.9
+  },
+  {
+    "id": 36,
+    "name": "LEBER MIT RÖSTZWIEBELN",
+    "qty": 1,
+    "price": 13.9
+  },
+  {
+    "id": 37,
+    "name": "GEGRILLTES HÄHNCHENBRUSTFILET",
+    "qty": 1,
+    "price": 14.5
+  },
+  {
+    "id": 38,
+    "name": "METEORA-STEAKS",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 39,
+    "name": "SCHWEINESCHITZEL",
+    "qty": 1,
+    "price": 13.6
+  },
+  {
+    "id": 40,
+    "name": "SUFLAKI ÜBERBACKEN",
+    "qty": 1,
+    "price": 16.8
+  },
+  {
+    "id": 41,
+    "name": "SCHWEINEFILET ÜBERBACKEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 42,
+    "name": "SUSUKI ÜBERBACKEN",
+    "qty": 1,
+    "price": 16.8
+  },
+  {
+    "id": 43,
+    "name": "HÄHNCHENBRUSTFILET HAWAII",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 44,
+    "name": "HÄHNCHENBRUSTFILET HAWAII",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 45,
+    "name": "MIX-TELLER ÜBERBACKEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 46,
+    "name": "STEAK ÜBERBACKEN",
+    "qty": 1,
+    "price": 15.5
+  },
+  {
+    "id": 47,
+    "name": "GYROS SPEZIAL ÜBERBACKEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 48,
+    "name": "STIFADO",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 49,
+    "name": "LAMM MIT AUBERGINEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 50,
+    "name": "LAMM MIT GRÜNEN BOHNEN",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 51,
+    "name": "LAMM MIT BAMIES (OKRASCHOTEN)",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 52,
+    "name": "LAMM MIT SPAGHETTI UND KÄSE",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 53,
+    "name": "LAMM MIT KRITHARAKI UND KÄSE",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 54,
+    "name": "POMMES FRITES",
+    "qty": 1,
+    "price": 3.8
+  },
+  {
+    "id": 55,
+    "name": "KNOBLAUCHKARTOFFELN",
+    "qty": 1,
+    "price": 4.1
+  },
+  {
+    "id": 56,
+    "name": "FOLIENKARTOFFEL MIT ZAZIKI",
+    "qty": 1,
+    "price": 4.4
+  },
+  {
+    "id": 57,
+    "name": "KROKETTEN",
+    "qty": 1,
+    "price": 3.6
+  },
+  {
+    "id": 58,
+    "name": "REIS NACH ART DES HAUSES",
+    "qty": 1,
+    "price": 3.6
+  },
+  {
+    "id": 59,
+    "name": "METAXASAUCE",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 60,
+    "name": "PFEFFERSAUCE",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 61,
+    "name": "SAUCE HOLLANDAISE",
+    "qty": 1,
+    "price": 3.7
+  },
+  {
+    "id": 62,
+    "name": "GRIECHISCHER JOGHURT",
+    "qty": 1,
+    "price": 5.8
+  },
+  {
+    "id": 63,
+    "name": "CHEF-PFANNE",
+    "qty": 1,
+    "price": 21.3
+  },
+  {
+    "id": 64,
+    "name": "GYROS PFÄNNCHEN",
+    "qty": 1,
+    "price": 15.8
+  },
+  {
+    "id": 65,
+    "name": "LEBER PFÄNNCHEN",
+    "qty": 1,
+    "price": 14.8
+  },
+  {
+    "id": 66,
+    "name": "HÄHNCHEN PFANNE",
+    "qty": 1,
+    "price": 15.8
+  },
+  {
+    "id": 67,
+    "name": "PFÄNNCHEN FANARI",
+    "qty": 1,
+    "price": 15.8
+  },
+  {
+    "id": 68,
+    "name": "AKROPOLIS-TELLER",
+    "qty": 1,
+    "price": 19.9
+  },
+  {
+    "id": 69,
+    "name": "FILET-TELLER",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 70,
+    "name": "ARTEMIS- PLATTE",
+    "qty": 1,
+    "price": 37.9
+  },
+  {
+    "id": 71,
+    "name": "RUMPSTEAK",
+    "qty": 1,
+    "price": 23.9
+  },
+  {
+    "id": 72,
+    "name": "RUMPSTEAK",
+    "qty": 1,
+    "price": 23.9
+  },
+  {
+    "id": 73,
+    "name": "RUMSTEAK MIT PFEFFERSAUCE",
+    "qty": 1,
+    "price": 23.9
+  },
+  {
+    "id": 74,
+    "name": "SPAGHETTI MIT HACKFLEISCH UND KÄSE",
+    "qty": 1,
+    "price": 9.8
+  },
+  {
+    "id": 75,
+    "name": "GRIECHISCHE NUDELN MIT KÄSE",
+    "qty": 1,
+    "price": 9.8
+  },
+  {
+    "id": 76,
+    "name": "FRISCHE FORELLE",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 77,
+    "name": "KALAMARIS",
+    "qty": 1,
+    "price": 15.6
+  },
+  {
+    "id": 78,
+    "name": "LACHSFILET 'LIMON'",
+    "qty": 1,
+    "price": 18.9
+  },
+  {
+    "id": 79,
+    "name": "SCAMPIS",
+    "qty": 1,
+    "price": 20.9
+  },
+  {
+    "id": 80,
+    "name": "KRETA-TELLER",
+    "qty": 1,
+    "price": 13.9
+  },
+  {
+    "id": 81,
+    "name": "THESSALONIKI-TELLER",
+    "qty": 1,
+    "price": 14.9
+  },
+  {
+    "id": 82,
+    "name": "ATHEN-TELLER",
+    "qty": 1,
+    "price": 15.9
+  },
+  {
+    "id": 83,
+    "name": "IPIROS-TELLER",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 84,
+    "name": "OUZO – TELLER",
+    "qty": 1,
+    "price": 19.9
+  },
+  {
+    "id": 85,
+    "name": "ZYKLOPEN AUGE",
+    "qty": 1,
+    "price": 14.9
+  },
+  {
+    "id": 86,
+    "name": "GYROS UND KALAMARIS",
+    "qty": 1,
+    "price": 15.6
+  },
+  {
+    "id": 87,
+    "name": "GYROS MIT GEGRILLTEM HÄHNCHENBRUSTFILET",
+    "qty": 1,
+    "price": 15.8
+  },
+  {
+    "id": 88,
+    "name": "WEIN – TELLER",
+    "qty": 1,
+    "price": 19.8
+  },
+  {
+    "id": 89,
+    "name": "PAIDAKIA",
+    "qty": 1,
+    "price": 18.8
+  },
+  {
+    "id": 90,
+    "name": "LAMMKEULE",
+    "qty": 1,
+    "price": 16.9
+  },
+  {
+    "id": 91,
+    "name": "LAMMFILET",
+    "qty": 1,
+    "price": 21.9
+  },
+  {
+    "id": 92,
+    "name": "König der Löwen",
+    "qty": 1,
+    "price": 8.3
+  },
+  {
+    "id": 93,
+    "name": "Micky Maus",
+    "qty": 1,
+    "price": 8.3
+  },
+  {
+    "id": 94,
+    "name": "Pumuckel-Teller",
+    "qty": 1,
+    "price": 9.3
+  },
+  {
+    "id": 95,
+    "name": "Donald Duck",
+    "qty": 1,
+    "price": 9.5
+  },
+  {
+    "id": 96,
+    "name": "Biene Maja",
+    "qty": 1,
+    "price": 10.4
+  },
+  {
+    "id": 97,
+    "name": "Spaghetti",
+    "qty": 1,
+    "price": 8.3
+  },
+  {
+    "id": 98,
+    "name": "Stauder Pils",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 99,
+    "name": "Stauder Pils",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 100,
+    "name": "Radler",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 101,
+    "name": "Radler",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 102,
+    "name": "Bolten Alt",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 103,
+    "name": "Glutenfreies Bier",
+    "qty": 1,
+    "price": 3.0
+  },
+  {
+    "id": 104,
+    "name": "Köstritzer Schwarzbier",
+    "qty": 1,
+    "price": 2.8
+  },
+  {
+    "id": 105,
+    "name": "Alkoholfreies Bier (Stauder)",
+    "qty": 1,
+    "price": 2.8
+  },
+  {
+    "id": 106,
+    "name": "Erdinger Hefe (hell, dunkel, alkoholfrei)",
+    "qty": 1,
+    "price": 3.3
+  },
+  {
+    "id": 107,
+    "name": "Coca Cola",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 108,
+    "name": "Fanta (Orangenlimonade)",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 109,
+    "name": "Sprite",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 110,
+    "name": "Spezi",
+    "qty": 1,
+    "price": 2.9
+  },
+  {
+    "id": 111,
+    "name": "Apfelschorle",
+    "qty": 1,
+    "price": 2.9
+  }
 ]
